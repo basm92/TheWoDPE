@@ -27,8 +27,9 @@
 
 
 %% Citing with footnotes
-
-\usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
+% replace \cite with \autocite (and vice versa if we want to go back to apalike eferences
+%\usepackage[style=verbose,backend=bibtex]{biblatex}
+\usepackage[notes, backend=biber]{biblatex-chicago}
 \bibliography{references}
 
 
@@ -60,7 +61,7 @@
 %\bibliographystyle{dcu}
 
 \usepackage[pdftex]{hyperref}
-\hypersetup{colorlinks, citecolor=blue, filecolor=blue, linkcolor=blue, urlcolor=blue}
+\hypersetup{colorlinks, citecolor=black, filecolor=blue, linkcolor=blue, urlcolor=blue}
 
 %\makeatletter
 %\renewcommand{\subsubsection}{\@startsection
