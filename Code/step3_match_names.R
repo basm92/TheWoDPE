@@ -130,5 +130,5 @@ merge_names <- function(uplow_clean, pdc_data){
 merge_names(lowerhouse, lowerhouse_pdc) -> lhparliaments
 merge_names(upperhouse, upperhouse_pdc) -> uhparliaments
   
-write.csv(lhparliaments, "./Data/lh_parliaments.csv")
-write.csv(uhparliaments, "./Data/uh_parliaments.csv")
+write_csv(lhparliaments, "./Data/lh_parliaments.csv")
+write_csv(uhparliaments, "./Data/uh_parliaments.csv")
