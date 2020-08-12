@@ -85,9 +85,29 @@ merge_names <- function(uplow_clean, pdc_data){
           
           match <- amatch(step1[k,]$Name, 
                           voorachternaam,
-                          maxDist = 20)
+                          maxDist = 10)
           
           step1[k,] <- cbind(cand[k,], query[match,])
+          
+        }
+      
+    }
+    
+    # Step 4: remove "van", "van der", "van den", "van de"
+    for (m in 1:nrow(step1)) {
+      if(!is.na(step1[m,]$b1_nummer)) {
+        next } else {
+          
+          corname <- stringr::str_replace_all(step1[m,]$Name, 
+                                          "van |van der |van den |van de |der ",
+                                          "")
+          
+          match <- stringdist::amatch(
+            corname, 
+            str_c(query$voorna_a_m_en, " ", query$achternaam),
+            maxDist = 10)
+          
+          step1[m,] <- cbind(cand[m,], query[match,])
           
         }
       
@@ -104,4 +124,5 @@ merge_names <- function(uplow_clean, pdc_data){
     
   }
 
+merge_names(lowerhouse, lowerhouse_pdc) -> test
   
