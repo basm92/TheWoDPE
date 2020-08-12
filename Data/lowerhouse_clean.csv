@@ -56,7 +56,7 @@ Unnamed: 0,Name,Parliament
 54,Johannes Leonardus Nierstrasz C.Jzn.,1871-1875
 55,Gerlach Cornelis Johannes van Reenen,1871-1875
 56,Cornelis Ascanius van Sypesteyn,1871-1875
-57,Pieter Hendrik Taets van Amerongen,1871-1875
+57,Pieter Hendrik Taets van Amerongen tot Natewisch,1871-1875
 58,Willem Wintgens,1871-1875
 59,Julius van Zuylen van Nijevelt,1871-1875
 60,Jan Hendrik Arnoldts,1871-1875
@@ -316,7 +316,7 @@ Unnamed: 0,Name,Parliament
 97,Jan Christiaan Fabius,1879-1883
 98,Jozef Jan Pompe van Meerdervoort,1879-1883
 99,Pieter Cornelis 't Hooft,1879-1883
-100,Gijsbert Hendrik Thomassen à Thuessink van der Hoop,1879-1883
+100,Gijsbert Hendrik Thomassen à Thuessink van der Hoop van Slochteren,1879-1883
 101,Theodoor Philip Mackay,1879-1883
 102,Frederik van Bylandt,1879-1883
 103,Karel Antonie Godin de Beaufort,1879-1883
@@ -374,7 +374,7 @@ Unnamed: 0,Name,Parliament
 38,Johannes Hendricus Donner,1883-1884
 39,Karel Antonie Godin de Beaufort,1883-1884
 40,Pieter Cornelis 't Hooft,1883-1884
-41,Gijsbert Hendrik Thomassen à Thuessink van der Hoop,1883-1884
+41,Gijsbert Hendrik Thomassen à Thuessink van der Hoop van Slochteren,1883-1884
 42,Levinus Wilhelmus Christiaan Keuchenius,1883-1884
 43,Æneas Mackay jr.,1883-1884
 44,Theodoor Philip Mackay,1883-1884
@@ -475,7 +475,7 @@ Unnamed: 0,Name,Parliament
 47,Barthold Jacob Lintelo de Geer van Jutphaas,1884-1886
 48,Karel Antonie Godin de Beaufort,1884-1886
 49,Pieter Cornelis 't Hooft,1884-1886
-50,Gijsbert Hendrik Thomassen à Thuessink van der Hoop,1884-1886
+50,Gijsbert Hendrik Thomassen à Thuessink van der Hoop van Slochteren,1884-1886
 51,Ulrich Herman Huber,1884-1886
 52,Levinus Wilhelmus Christiaan Keuchenius,1884-1886
 53,Æneas Mackay jr.,1884-1886
@@ -1017,7 +1017,7 @@ Unnamed: 0,Name,Parliament
 97,Menso Johannes Pijnappel,1894-1897
 98,Boelo Tijdens,1894-1897
 99,Æneas Mackay jr.,1894-1897
-100,Jan Loeff,1894-1897
+100,Johannes Alouisius Loeff,1894-1897
 101,Charles Casimir Marie Hubert de Bieberstein Rogalla Zawadsky,1894-1897
 102,Jan Hendrik Jacob Quarles van Ufford,1894-1897
 103,Wiel Nolens,1894-1897
@@ -1069,7 +1069,7 @@ Unnamed: 0,Name,Parliament
 29,Jan Harte van Tecklenburg,1897-1901
 30,Maximilien Joseph Caspar Marie Kolkman,1897-1901
 31,Emile Alexis Marie van der Kun,1897-1901
-32,Jan Loeff,1897-1901
+32,Johannes Alouisius Loeff,1897-1901
 33,Joseph Mathias Maria Hubertus Merckelbach,1897-1901
 34,Louis Michiels van Verduynen,1897-1901
 35,Willem Mutsaers,1897-1901
@@ -1272,7 +1272,7 @@ Unnamed: 0,Name,Parliament
 8,François Isidore Joseph Janssen,1905-1909
 9,Maximilien Joseph Caspar Marie Kolkman,1905-1909
 10,Dionysius Adrianus Petrus Norbertus Koolen,1905-1909
-11,Jan Loeff,1905-1909
+11,Johannes Alouisius Loeff,1905-1909
 12,Louis Michiels van Verduynen,1905-1909
 13,Octaaf van Nispen,1905-1909
 14,Wiel Nolens,1905-1909
@@ -1362,7 +1362,7 @@ Unnamed: 0,Name,Parliament
 98,Geert van der Zwaag,1905-1909
 99,Jan Schokking,1905-1909
 100,Willem Hendrik Bogaardt,1905-1909
-101,Joseph Willem Jan Carel Marie van Nispen,1905-1909
+101,Joseph Willem Jan Carel Marie Nispen tot Sevenaer,1905-1909
 102,Schelto van Citters,1905-1909
 103,Simon de Vries Czn,1905-1909
 104,Jan van der Molen,1905-1909
@@ -1384,8 +1384,8 @@ Unnamed: 0,Name,Parliament
 8,Vincentius Adrianus Maria van den Heuvel,1909-1913
 9,François Isidore Joseph Janssen,1909-1913
 10,Dionysius Adrianus Petrus Norbertus Koolen,1909-1913
-11,Jan Loeff,1909-1913
-12,Joseph Willem Jan Carel Marie van Nispen,1909-1913
+11,Johannes Alouisius Loeff,1909-1913
+12,Joseph Willem Jan Carel Marie Nispen tot Sevenaer,1909-1913
 13,Octaaf van Nispen,1909-1913
 14,Wiel Nolens,1909-1913
 15,Willem Caspar Joseph Passtoors,1909-1913
@@ -1494,8 +1494,8 @@ Unnamed: 0,Name,Parliament
 10,François Isidore Joseph Janssen,1913-1917
 11,Wilhelmus Johannes Franciscus Juten,1913-1917
 12,Dionysius Adrianus Petrus Norbertus Koolen,1913-1917
-13,Jan Loeff,1913-1917
-14,Joseph Willem Jan Carel Marie van Nispen,1913-1917
+13,Johannes Alouisius Loeff,1913-1917
+14,Joseph Willem Jan Carel Marie Nispen tot Sevenaer,1913-1917
 15,Octaaf van Nispen,1913-1917
 16,Wiel Nolens,1913-1917
 17,Charles Ruijs de Beerenbrouck,1913-1917
@@ -1615,7 +1615,7 @@ Unnamed: 0,Name,Parliament
 13,Wilhelmus Johannes Franciscus Juten,1917-1918
 14,Maximilien Joseph Caspar Marie Kolkman,1917-1918
 15,Dionysius Adrianus Petrus Norbertus Koolen,1917-1918
-16,Jan Loeff,1917-1918
+16,Johannes Alouisius Loeff,1917-1918
 17,Wiel Nolens,1917-1918
 18,Augustinus Bernardus Gijsbertus Maria van Rijckevorsel,1917-1918
 19,Charles Ruijs de Beerenbrouck,1917-1918
@@ -1722,7 +1722,7 @@ Unnamed: 0,Name,Parliament
 15,Maximilien Joseph Caspar Marie Kolkman,1918-1922
 16,Dionysius Adrianus Petrus Norbertus Koolen,1918-1922
 17,Kees Kuiper,1918-1922
-18,Jan Loeff,1918-1922
+18,Johannes Alouisius Loeff,1918-1922
 19,Wiel Nolens,1918-1922
 20,Johannes Antonius Poels,1918-1922
 21,Paul Reymer,1918-1922

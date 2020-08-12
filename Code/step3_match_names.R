@@ -119,10 +119,16 @@ merge_names <- function(uplow_clean, pdc_data){
     
     }
     
-  #Now concatenate everything
-  purrr::reduce(matched, rbind)
+  #Now concatenate everything and remove NA's (mistake in wiki)
+  purrr::reduce(matched, rbind) %>%
+    filter(!is.na(b1_nummer))
     
   }
 
-merge_names(lowerhouse, lowerhouse_pdc) -> test
+
+# write csv's
+merge_names(lowerhouse, lowerhouse_pdc) -> lhparliaments
+merge_names(upperhouse, upperhouse_pdc) -> uhparliaments
   
+write.csv(lhparliaments, "./Data/lh_parliaments.csv")
+write.csv(uhparliaments, "./Data/uh_parliaments.csv")

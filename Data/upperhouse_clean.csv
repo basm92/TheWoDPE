@@ -31,7 +31,7 @@ Unnamed: 0,Name,Parliament
 29,Cornelis Herman van Rhemen van Rhemenshuizen,1871-1874
 30,Carolus Jacobus Antonius van Rijckevorsel,1871-1874
 31,Jan Arend Godert de Vos van Steenwijk,1871-1874
-32,Hans Willem van Aylva van Pallandt,1871-1874
+32,Hans Willem Aylva baron van Pallandt van Waardenburg en Neerijnen,1871-1874
 33,Jan Karel van Goltstein,1871-1874
 34,Cornelis Hartsen,1871-1874
 35,Jan Messchert van Vollenhoven,1871-1874
@@ -75,7 +75,7 @@ Unnamed: 0,Name,Parliament
 29,Cornelis Herman van Rhemen van Rhemenshuizen,1874-1877
 30,Carolus Jacobus Antonius van Rijckevorsel,1874-1877
 31,Jan Arend Godert de Vos van Steenwijk,1874-1877
-32,Hans Willem van Aylva van Pallandt,1874-1877
+32,Hans Willem Aylva baron van Pallandt van Waardenburg en Neerijnen,1874-1877
 33,Cornelis Hartsen,1874-1877
 34,Evert du Marchie van Voorthuysen,1874-1877
 35,Wyncko Johannes Tonckens,1874-1877
@@ -123,7 +123,7 @@ Unnamed: 0,Name,Parliament
 34,Joan Huydecoper van Maarsseveen,1877-1880
 35,Carolus Jacobus Antonius van Rijckevorsel,1877-1880
 36,Jan Arend Godert de Vos van Steenwijk,1877-1880
-37,Hans Willem van Aylva van Pallandt,1877-1880
+37,Hans Willem Aylva baron van Pallandt van Waardenburg en Neerijnen,1877-1880
 38,Evert du Marchie van Voorthuysen,1877-1880
 39,Albert Jan Blijdenstein,1877-1880
 40,Coos Cremers,1877-1880
@@ -261,7 +261,7 @@ Unnamed: 0,Name,Parliament
 36,Menso Johannes Pijnappel,1884-1887
 37,Willem Anne Assueer Jacob Schimmelpenninck van der Oye,1884-1887
 38,Theo van Lynden van Sandenburg,1884-1887
-39,Sjoerd Vening Meinesz,1884-1887
+39,Sjoerd Anne Vening Meinesz,1884-1887
 40,Abraham Carel Wertheim,1884-1887
 41,Joan Röell,1884-1887
 42,Pieter Jacob Elout van Soeterwoude,1884-1887
@@ -287,7 +287,7 @@ Unnamed: 0,Name,Parliament
 19,Johannes Tak van Poortvliet,1887-1888
 20,Jacobus Thooft,1887-1888
 21,Gijsbert van Tienhoven,1887-1888
-22,Sjoerd Vening Meinesz,1887-1888
+22,Sjoerd Anne Vening Meinesz,1887-1888
 23,Theodorus Pieter Viruly,1887-1888
 24,Joost van Vollenhoven,1887-1888
 25,Godert Willem de Vos van Steenwijk,1887-1888
@@ -332,7 +332,7 @@ Unnamed: 0,Name,Parliament
 24,Jan Hendrik Frans Karel van Swinderen,1888-1890
 25,Jacobus Thooft,1888-1890
 26,Gijsbert van Tienhoven,1888-1890
-27,Sjoerd Vening Meinesz,1888-1890
+27,Sjoerd Anne Vening Meinesz,1888-1890
 28,Theodorus Pieter Viruly,1888-1890
 29,Benjamin Marius Vlielander Hein,1888-1890
 30,Godert Willem de Vos van Steenwijk,1888-1890
@@ -352,12 +352,12 @@ Unnamed: 0,Name,Parliament
 44,Willem Constantijn van Pallandt van Waardenburg,1888-1890
 45,Willem Anne Assueer Jacob Schimmelpenninck van der Oye,1888-1890
 46,Jacob Pieter Pompejus van Zuylen van Nijevelt,1888-1890
-47,Justinus Egbert Hendrik van Nagell,1888-1890
+47,Justinus Egbert Hendrik Nagell van Ampsen,1888-1890
 48,Menso Johannes Pijnappel,1888-1890
 49,Robert Melvil van Lynden,1888-1890
 50,Frederik Herman Pieter van Alphen,1888-1890
 51,Anthony Ewoud Jan Nysingh,1888-1890
-52,Franciscus Xaverius Jacobus van Nispen,1888-1890
+52,Franciscus Xaverius Jacobus Nispen tot Pannerden,1888-1890
 53,Willem Merkelbach,1888-1890
 0,Dirk van Akerlaken,1890-1893
 1,Willem Carel Antoon Alberda van Ekenstein,1890-1893
@@ -387,7 +387,7 @@ Unnamed: 0,Name,Parliament
 25,Jan Hendrik Frans Karel van Swinderen,1890-1893
 26,Jacobus Thooft,1890-1893
 27,Gijsbert van Tienhoven,1890-1893
-28,Sjoerd Vening Meinesz,1890-1893
+28,Sjoerd Anne Vening Meinesz,1890-1893
 29,Theodorus Pieter Viruly,1890-1893
 30,Benjamin Marius Vlielander Hein,1890-1893
 31,Wilco Julius van Welderen Rengers,1890-1893
@@ -398,7 +398,7 @@ Unnamed: 0,Name,Parliament
 36,Léon Armand Hyacinthe Magnée,1890-1893
 37,Willem Merkelbach,1890-1893
 38,Leo van Nispen,1890-1893
-39,Franciscus Xaverius Jacobus van Nispen,1890-1893
+39,Franciscus Xaverius Jacobus Nispen tot Pannerden,1890-1893
 40,Willem Hubert Pyls,1890-1893
 41,Hubert Gérard Louis Regout,1890-1893
 42,Johannes Theodorus Smits van Oyen,1890-1893
@@ -406,7 +406,7 @@ Unnamed: 0,Name,Parliament
 44,Johannes Baptista Arnoldus Josephus Maria Verheyen,1890-1893
 45,Willem Constantijn van Pallandt van Waardenburg,1890-1893
 46,Jacob Pieter Pompejus van Zuylen van Nijevelt,1890-1893
-47,Justinus Egbert Hendrik van Nagell,1890-1893
+47,Justinus Egbert Hendrik Nagell van Ampsen,1890-1893
 48,Menso Johannes Pijnappel,1890-1893
 49,Robert Melvil van Lynden,1890-1893
 50,Eppo Cremers,1890-1893
@@ -447,7 +447,7 @@ Unnamed: 0,Name,Parliament
 23,Berend van Roijen,1893-1896
 24,Charles Theodorus Stork,1893-1896
 25,Jan Hendrik Frans Karel van Swinderen,1893-1896
-26,Sjoerd Vening Meinesz,1893-1896
+26,Sjoerd Anne Vening Meinesz,1893-1896
 27,Theodorus Pieter Viruly,1893-1896
 28,Benjamin Marius Vlielander Hein,1893-1896
 29,Wilco Julius van Welderen Rengers,1893-1896
@@ -457,7 +457,7 @@ Unnamed: 0,Name,Parliament
 33,Léon Armand Hyacinthe Magnée,1893-1896
 34,Willem Merkelbach,1893-1896
 35,Leo van Nispen,1893-1896
-36,Franciscus Xaverius Jacobus van Nispen,1893-1896
+36,Franciscus Xaverius Jacobus Nispen tot Pannerden,1893-1896
 37,Willem Prinzen Fzn.,1893-1896
 38,Willem Hubert Pyls,1893-1896
 39,Hubert Gérard Louis Regout,1893-1896
@@ -505,7 +505,7 @@ Unnamed: 0,Name,Parliament
 22,Eduard Nicolaas Rahusen,1896-1899
 23,Jan Hendrik Frans Karel van Swinderen,1896-1899
 24,Gijsbert van Tienhoven,1896-1899
-25,Sjoerd Vening Meinesz,1896-1899
+25,Sjoerd Anne Vening Meinesz,1896-1899
 26,Theodorus Pieter Viruly,1896-1899
 27,Benjamin Marius Vlielander Hein,1896-1899
 28,Wilco Julius van Welderen Rengers,1896-1899
@@ -515,7 +515,7 @@ Unnamed: 0,Name,Parliament
 32,Léon Armand Hyacinthe Magnée,1896-1899
 33,Willem Merkelbach,1896-1899
 34,Leo van Nispen,1896-1899
-35,Franciscus Xaverius Jacobus van Nispen,1896-1899
+35,Franciscus Xaverius Jacobus Nispen tot Pannerden,1896-1899
 36,Willem Prinzen Fzn.,1896-1899
 37,Willem Hubert Pyls,1896-1899
 38,Frederic Joseph Maria Anton Reekers,1896-1899
@@ -564,7 +564,7 @@ Unnamed: 0,Name,Parliament
 22,Joan Röell,1899-1902
 23,Jan Willem Hendrik Rutgers van Rozenburg,1899-1902
 24,Jan Hendrik Frans Karel van Swinderen,1899-1902
-25,Sjoerd Vening Meinesz,1899-1902
+25,Sjoerd Anne Vening Meinesz,1899-1902
 26,Theodorus Pieter Viruly,1899-1902
 27,Benjamin Marius Vlielander Hein,1899-1902
 28,Wilco Julius van Welderen Rengers,1899-1902
@@ -626,7 +626,7 @@ Unnamed: 0,Name,Parliament
 20,Jan Evert Scholten,1902-1904
 21,Jacob Sickenga,1902-1904
 22,Johannes Tak van Poortvliet,1902-1904
-23,Sjoerd Vening Meinesz,1902-1904
+23,Sjoerd Anne Vening Meinesz,1902-1904
 24,Benjamin Marius Vlielander Hein,1902-1904
 25,Wilco Julius van Welderen Rengers,1902-1904
 26,Derk Knol Welt,1902-1904
@@ -672,7 +672,7 @@ Unnamed: 0,Name,Parliament
 11,Willem Prinzen Fzn.,1904-1907
 12,Frederic Joseph Maria Anton Reekers,1904-1907
 13,Louis Regout,1904-1907
-14,Alphons Sassen van Vlierden,1904-1907
+14,Alphonsus Maria Sassen,1904-1907
 15,Petrus Jacobus Franciscus Vermeulen,1904-1907
 16,Walther Simon Joseph van Waterschoot van der Gracht,1904-1907
 17,Emilius Henricus Josephus Maria van Zinnicq Bergmann,1904-1907
@@ -690,7 +690,7 @@ Unnamed: 0,Name,Parliament
 29,Jan Evert Scholten,1904-1907
 30,Jacob Sickenga,1904-1907
 31,Dirk Willem Stork,1904-1907
-32,Sjoerd Vening Meinesz,1904-1907
+32,Sjoerd Anne Vening Meinesz,1904-1907
 33,Wilco Julius van Welderen Rengers,1904-1907
 34,Derk Knol Welt,1904-1907
 35,Jan Jacob Willinge,1904-1907
@@ -727,7 +727,7 @@ Unnamed: 0,Name,Parliament
 12,Jacob Sickenga,1907-1910
 13,Henri Staal,1907-1910
 14,Dirk Willem Stork,1907-1910
-15,Sjoerd Vening Meinesz,1907-1910
+15,Sjoerd Anne Vening Meinesz,1907-1910
 16,Wilco Julius van Welderen Rengers,1907-1910
 17,Derk Knol Welt,1907-1910
 18,Willem Henricus Jacobus Theodorus van Basten Batenburg,1907-1910
@@ -766,7 +766,7 @@ Unnamed: 0,Name,Parliament
 51,Edzard Tjarda van Starkenborgh Stachouwer,1907-1910
 52,Karel Raymakers,1907-1910
 53,Oscar Maria Franciscus Haffmans,1907-1910
-54,Jan Joseph Godfried van Voorst,1907-1910
+54,Jan Joseph Godfried Voorst tot Voorst,1907-1910
 55,Franciscus Xaverius Arnoldus Verheyen,1907-1910
 56,Louis Henri Leonard Joseph van der Maesen de Sombreff,1907-1910
 57,Harry Barge,1907-1910
@@ -786,7 +786,7 @@ Unnamed: 0,Name,Parliament
 12,Jacob Sickenga,1910-1913
 13,Henri Staal,1910-1913
 14,Dirk Willem Stork,1910-1913
-15,Sjoerd Vening Meinesz,1910-1913
+15,Sjoerd Anne Vening Meinesz,1910-1913
 16,Wilco Julius van Welderen Rengers,1910-1913
 17,Derk Knol Welt,1910-1913
 18,Willem Henricus Jacobus Theodorus van Basten Batenburg,1910-1913
@@ -825,7 +825,7 @@ Unnamed: 0,Name,Parliament
 51,Edzard Tjarda van Starkenborgh Stachouwer,1910-1913
 52,Karel Raymakers,1910-1913
 53,Oscar Maria Franciscus Haffmans,1910-1913
-54,Jan Joseph Godfried van Voorst,1910-1913
+54,Jan Joseph Godfried Voorst tot Voorst,1910-1913
 55,Franciscus Xaverius Arnoldus Verheyen,1910-1913
 56,Louis Henri Leonard Joseph van der Maesen de Sombreff,1910-1913
 57,Harry Barge,1910-1913
@@ -846,7 +846,7 @@ Unnamed: 0,Name,Parliament
 13,Antonius Johannes Ignatius Maria Smits,1913-1916
 14,Franciscus Xaverius Arnoldus Verheyen,1913-1916
 15,Petrus Jacobus Franciscus Vermeulen,1913-1916
-16,Jan Joseph Godfried van Voorst,1913-1916
+16,Jan Joseph Godfried Voorst tot Voorst,1913-1916
 17,Walther Simon Joseph van Waterschoot van der Gracht,1913-1916
 18,Edo Johannes Bergsma,1913-1916
 19,Reitze Bloembergen Ezn.,1913-1916
@@ -884,8 +884,8 @@ Unnamed: 0,Name,Parliament
 51,Jan Willem Marie Bosch van Oud-Amelisweerd,1913-1916
 52,Arnoldus Josephus Aloysius Gilissen,1913-1916
 53,Rudolph Johan August Diepen,1913-1916
-54,Hendrik Gerard van Holthe,1913-1916
-55,Theo van Welderen Rengers,1913-1916
+54,Hendrik Gerard Holthe tot Echten,1913-1916
+55,Theodorus Marius Theresius Welderen baron Renger,1913-1916
 56,Jacobus Kappeyne van de Coppello,1913-1916
 57,Hendrik Colijn,1913-1916
 58,Christiaan Lucasse,1913-1916
@@ -906,14 +906,14 @@ Unnamed: 0,Name,Parliament
 12,Antonius Johannes Ignatius Maria Smits,1916-1917
 13,Gerardus Jacobus van Swaaij,1916-1917
 14,Franciscus Xaverius Arnoldus Verheyen,1916-1917
-15,Jan Joseph Godfried van Voorst,1916-1917
+15,Jan Joseph Godfried Voorst tot Voorst,1916-1917
 16,Walther Simon Joseph van Waterschoot van der Gracht,1916-1917
 17,Edo Johannes Bergsma,1916-1917
 18,Halbe Binnerts,1916-1917
 19,Klaas de Boer Czn.,1916-1917
 20,Jacob Theodoor Cremer,1916-1917
 21,Rembertus Pieter Dojes,1916-1917
-22,Hendrik Gerard van Holthe,1916-1917
+22,Hendrik Gerard Holthe tot Echten,1916-1917
 23,Douwinus Johannes van Houten,1916-1917
 24,Jacobus Kappeyne van de Coppello,1916-1917
 25,Jacob Kraus,1916-1917
@@ -958,7 +958,7 @@ Unnamed: 0,Name,Parliament
 12,Antonius Johannes Ignatius Maria Smits,1917-1919
 13,Gerardus Jacobus van Swaaij,1917-1919
 14,Franciscus Xaverius Arnoldus Verheyen,1917-1919
-15,Jan Joseph Godfried van Voorst,1917-1919
+15,Jan Joseph Godfried Voorst tot Voorst,1917-1919
 16,Franciscus Hubertus van Wichen,1917-1919
 17,Edo Johannes Bergsma,1917-1919
 18,Halbe Binnerts,1917-1919
@@ -966,7 +966,7 @@ Unnamed: 0,Name,Parliament
 20,Jacob Theodoor Cremer,1917-1919
 21,Rembertus Pieter Dojes,1917-1919
 22,Carel Coenraad Geertsema,1917-1919
-23,Hendrik Gerard van Holthe,1917-1919
+23,Hendrik Gerard Holthe tot Echten,1917-1919
 24,Douwinus Johannes van Houten,1917-1919
 25,Jacobus Kappeyne van de Coppello,1917-1919
 26,Jacob Kraus,1917-1919
@@ -1029,7 +1029,7 @@ Unnamed: 0,Name,Parliament
 30,Antonius Johannes Ignatius Maria Smits,1919-1922
 31,Gerardus Jacobus van Swaaij,1919-1922
 32,Franciscus Xaverius Arnoldus Verheyen,1919-1922
-33,Jan Joseph Godfried van Voorst,1919-1922
+33,Jan Joseph Godfried Voorst tot Voorst,1919-1922
 34,Franciscus Hubertus van Wichen,1919-1922
 35,Edo Johannes Bergsma,1919-1922
 36,Halbe Binnerts,1919-1922
