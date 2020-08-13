@@ -3,6 +3,7 @@ library(readxl)
 library(tidyverse)
 library(gridExtra)
 library(cowplot)   
+library(janitor)
 source("./Code/classify.R")
 # Read data
 polparty <- read_csv("Data/key_politicalparty_category.csv") %>%
@@ -100,4 +101,6 @@ p_dep <- gedeputeerden %>%
     breaks = NULL)
 
 #grid.arrange(p_lh, p_uh, p_min, p_dep, ncol = 2)
-plot_grid(p_lh, p_uh, p_min, p_dep, ncol = 2, align = "v")
+fig1 <- plot_grid(p_lh, p_uh, p_min, p_dep, ncol = 2, align = "v")
+
+ggsave("./Figures/fig_wealth_function.png", fig1)

@@ -89,4 +89,6 @@ p2 <- parlovtime_uh %>%
   ggtitle("Political Color of the Upper House") +
   ylab("Proportion") +xlab("Date") + theme_minimal()
 
-cowplot::plot_grid(p1, p2, nrow = 1)
+fig <- cowplot::plot_grid(p1, p2, nrow = 1)
+
+ggsave("./Figures/step4comp.png", fig)
