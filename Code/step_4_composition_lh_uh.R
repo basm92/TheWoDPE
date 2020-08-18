@@ -57,7 +57,8 @@ p1 <- parlovtime %>%
   geom_line() +
   theme_minimal() +
   ggtitle("Political Color of the Lower House") +
-  ylab("Proportion") +xlab("Date") + theme_minimal()
+  ylab("Proportion") +xlab("Date") + theme_minimal() + 
+  ylim(0, 0.8)
 
 # create same for upper house
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -89,6 +90,6 @@ p2 <- parlovtime_uh %>%
   ggtitle("Political Color of the Upper House") +
   ylab("Proportion") +xlab("Date") + theme_minimal()
 
-fig <- cowplot::plot_grid(p1, p2, nrow = 1)
+fig <- cowplot::plot_grid(p1, p2, nrow = 2, align = "v")
 
 ggsave("./Figures/step4comp.png", fig)
