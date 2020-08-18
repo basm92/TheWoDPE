@@ -74,6 +74,11 @@ classify <- function(df){
     str_detect(partij_en_fractie_s, "Volkspartij|Vrijheidsbond.*?"),
     "liberal",
     class
+  ),
+  class = ifelse(
+    str_detect(partij_en_fractie_s, "technocraat"),
+    "neutral",
+    class
   )
 )
 }

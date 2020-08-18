@@ -59,7 +59,13 @@ p_lh <- lh_parliaments %>%
   xlab("Political orientaiton") + 
   ylab("log(Wealth)") + 
   theme_classic() +
-  ylim(7,16)
+  ylim(7,16) +
+# Test on p_lh second y axis
+  scale_y_continuous(sec.axis = sec_axis(~exp(.), 
+                                              breaks = c(0, 1000, 10000, 100000, 1e6), 
+                                              labels = scales::label_number(accuracy = 1), 
+                                              name = "Wealth (guilders)"))
+
 
 p_uh <- uh_parliaments %>%
   mutate(w_deflated = log(w_deflated)) %>%
@@ -71,7 +77,12 @@ p_uh <- uh_parliaments %>%
   xlab("") + 
   ylab("log(Wealth)") + 
   theme_classic() +
-  ylim(7,16)
+  ylim(7,16) +
+  # Test on p_lh second y axis
+  scale_y_continuous(sec.axis = sec_axis(~exp(.), 
+                                         breaks = c(0, 1000, 10000, 100000, 1e6), 
+                                         labels = scales::label_number(accuracy = 1), 
+                                         name = "Wealth (guilders)"))
 
 p_min <- ministers %>%
   filter(class == "confessional" | class == "liberal") %>%
@@ -83,7 +94,12 @@ p_min <- ministers %>%
   xlab("Political orientaiton") + 
   ylab("log(Wealth)") + 
   theme_classic() +
-  ylim(7,16)
+  ylim(7,16) +
+  # Test on p_lh second y axis
+  scale_y_continuous(sec.axis = sec_axis(~exp(.), 
+                                         breaks = c(0, 1000, 10000, 100000, 1e6), 
+                                         labels = scales::label_number(accuracy = 1), 
+                                         name = "Wealth (guilders)"))
   
 
 p_dep <- gedeputeerden %>%
@@ -98,7 +114,12 @@ p_dep <- gedeputeerden %>%
   ylim(7,16) + 
   scale_x_continuous(
     limits = c(-0.75, 0.75), 
-    breaks = NULL)
+    breaks = NULL) +
+  # Test on p_lh second y axis
+  scale_y_continuous(sec.axis = sec_axis(~exp(.), 
+                                         breaks = c(0, 1000, 10000, 100000, 1e6), 
+                                         labels = scales::label_number(accuracy = 1), 
+                                         name = "Wealth (guilders)"))
 
 #grid.arrange(p_lh, p_uh, p_min, p_dep, ncol = 2)
 fig1 <- plot_grid(p_lh, p_uh, p_min, p_dep, ncol = 2, align = "v")
