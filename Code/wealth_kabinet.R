@@ -51,18 +51,20 @@ wealthreg <- wealthreg %>%
     group_by(govt) %>%
     summarize(mean = mean(w_deflated, na.rm = T), 
               median = median(w_deflated, na.rm = T),
+              sd = sd(w_deflated, na.rm = T),
               count = sum(!is.na(w_deflated))) %>%
-    pivot_longer(mean:median, 
+    pivot_longer(mean:sd, 
                  names_to = "Statistic", 
                  values_to = "Wealth") 
 
 ## Figure
 p1 <- wealthreg %>%
+    filter(Statistic != "sd") %>%
     ggplot(aes(x = govt, 
                y = Wealth, 
                group = Statistic, 
-               color = Statistic)) + 
-    geom_line() + 
+               fill = Statistic)) + 
+    geom_bar(position = "dodge", stat = "identity") + 
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, 
                                      hjust = 1,
