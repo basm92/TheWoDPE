@@ -17,14 +17,14 @@ lh_parliaments <- left_join(lh_parliaments, wealth,
 
 meanmedw_lh <- lh_parliaments %>%
   group_by(parliament) %>%
-  summarize(mean = mean(w_deflated, na.rm = T), 
-            median = median(w_deflated, na.rm = T),
+  summarize(median = median(w_deflated, na.rm = T),
             p25 = quantile(w_deflated, 0.25, na.rm = T),
             p75 = quantile(w_deflated, 0.75, na.rm = T),
+            p90 = quantile(w_deflated, 0.90, na.rm = T),
             count = sum(!is.na(w_deflated)))
 
 p1 <- meanmedw_lh %>%
- pivot_longer(c(mean, median, p25, p75),
+ pivot_longer(c(median, p25, p75, p90),
               names_to = "Statistic", 
               values_to = "Wealth") %>%
   ggplot(aes(x = parliament, 
@@ -35,12 +35,10 @@ p1 <- meanmedw_lh %>%
   theme_minimal() + 
   xlab("Parliament") +
   ylab("Wealth (guilders)") +
-  theme(axis.text.x = element_text(angle = 45)) +
+  theme(axis.text.x = element_text(angle = 45), legend.position = c(0.9, 0.9)) +
   ggtitle("Lower House", "Avg. and Median Wealth per Standing") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
-                     limits=c(0,10e5))
-
-p1 <- p1 + theme(legend.position = c(0.9, 0.9))
+                     limits=c(0,12e5))
 
 #now, read uh
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -52,14 +50,14 @@ uh_parliaments <- left_join(uh_parliaments, wealth,
 
 meanmedw_uh <- uh_parliaments %>%
   group_by(parliament) %>%
-  summarize(mean = mean(w_deflated, na.rm = T), 
-            median = median(w_deflated, na.rm = T),     
+  summarize(median = median(w_deflated, na.rm = T),     
             p25 = quantile(w_deflated, 0.25, na.rm = T),
             p75 = quantile(w_deflated, 0.75, na.rm = T),
+            p90 = quantile(w_deflated, 0.90, na.rm = T),
             count = sum(!is.na(w_deflated)))
 
 p2 <- meanmedw_uh %>%
-  pivot_longer(c(mean,median,p25, p75),
+  pivot_longer(c(median,p25, p75, p90),
                names_to = "Statistic", 
                values_to = "Wealth") %>%
   ggplot(aes(x = parliament, 
@@ -73,11 +71,11 @@ p2 <- meanmedw_uh %>%
   theme(axis.text.x = element_text(angle = 45)) +
   ggtitle("Upper House", "Avg. and Median Wealth per Standing") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
-                     limits = c(0, 10e5)) +
+                     limits = c(0, 20e5)) +
 theme(legend.position = "none")
 
 
 fig <- cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(45,55))
 
-ggsave("./Figures/step5fig2wealthperparl.png", fig)
+ggsave("./Figures/step5fig2wealthperparl.png", fig, width = 7.41, height = 10)
 

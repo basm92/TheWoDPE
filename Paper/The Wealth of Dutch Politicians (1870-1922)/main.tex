@@ -2,7 +2,17 @@
 \usepackage[utf8]{inputenc}
 
 \title{The Wealth of the Dutch Political Elite (1870-1922)}
-\author{Bas Machielsen}
+\author{
+  Bas Machielsen\\
+  \texttt{a.h.machielsen@uu.nl}
+  \and
+  Abe de Jong\\
+  \texttt{abe.dejong@monash.edu}
+  \and
+  Oscar Gelderblom\\
+  \texttt{o.c.gelderblom@uu.nl}
+}
+
 \date{August 2020}
 
 \begin{document}
@@ -12,7 +22,7 @@
 \begin{center}
 \textbf{Abstract:}
 \end{center}
-Using newly-collected archival data, this study investigates the wealth and investment portfolio's of Dutch politicians from 1870 to 1922. The study finds that first, politicians are wealthy in comparison to the average citizen. Second, upper house members are by far the wealthiest politicians followed by executives. Lower house politicians are the poorest on average, consistent with the lower house being accessible by the entire male population of the country. Finally, there is no strong trend towards a more equal representation of the Dutch population in the nineteenth century, but towards the 1920's, a substantial number of poorer politicians was elected. To the authors' knowledge, this is the first study detailing the trajectory of personal wealth of politicians in the 19th century.
+Using newly-collected archival data, this study investigates the wealth and investment portfolio's of Dutch politicians from 1870 to 1922. The study finds that first, politicians are wealthy in comparison to the average citizen. Second, upper house members are by far the wealthiest politicians followed by executives. Lower house politicians are the poorest on average, consistent with the lower house being accessible by the entire male population of the country. Finally, there is no strong trend towards a more equal representation of the Dutch population in the nineteenth century, but towards the 1920's, a substantial number of poorer politicians was elected and politicians of all kinds were significantly less wealthy than their predecessors. To the authors' knowledge, this is the first study detailing the trajectory of personal wealth of politicians in the 19th century.
 \clearpage
 
 \section{Introduction}
@@ -40,8 +50,7 @@ Whereas the present-day literature has investigated various factors, as of yet, 
 
 In the context of pillarization, we also compare and contrast the wealth of politicians of different parties, shedding light on two questions: firstly, do there exist substantial differences in wealth between politicians of different religious affiliation or political ideology? Secondly, how does this difference evolve over time? The latter question sheds light on mechanisms at play in political selection: politicians join political parties, and are endorsed by newspapers, which sharply influence political competition over time. Facing a changing electoral environment, political parties are likely to take different decisions regarding the politicians they choose to support. One likely way in which this change could manifest itself is by allowing candidates of different wealth levels and different social origins to be candidates, given an electorate that might be more inclined to opt for these candidates. 
 
-We find that, throughout the entire period of investigation, there is a substantial gap between the wealth of politicians and the wealth of the general population in all representative bodies. The gap is largest in the upper house, consistent with both the exclusive nature of the upper house and legal restrictions to eligibility, but it was also substantial for executives, and perhaps more surprisingly, for the lower house members. Even though the lower house was in theory accessible to any male candidate since 1848, in practice, elected politicians were on average much wealthier than the general population, \footnote{The results also hold for the median politician: the estimate of the average is highly sensitive to outliers.} and the gap between politicians and the general population only began to narrow in the early 20th century, after significant suffrage extensions had been effectuated. Nevertheless, the gap still remained very large, with the median politician to be in the [XX]-quantile of the wealth distribution, according to our estimates. On the other hand, there were a substantial number of lower house politicians who died with practically no estate, similar to the median Dutch citizen at the time. 
-
+We find that, throughout the entire period of investigation, there is a substantial gap between the wealth of politicians and the wealth of the general population in all representative bodies. The gap is largest in the upper house, consistent with both the exclusive nature of the upper house and legal restrictions to eligibility, but it was also substantial for executives, and perhaps more surprisingly, for the lower house members. Even though the lower house was in theory accessible to any male candidate since 1848, in practice, elected politicians were on average much wealthier than the general population, and the gap between politicians and the general population only began to narrow in the early 20th century, after significant suffrage extensions had been effectuated.\footnote{The results also hold for the median politician: the estimate of the average is highly sensitive to outliers.} Nevertheless, the gap still remained very large, with the median politician to be in the upper decile of the wealth distribution, according to our estimates. On the other hand, there were a substantial number of lower house politicians who died with practically no estate, similar to the median Dutch citizen at the time.\autocite{de2020exploring}
 
 \section{Definition of the Political Elite}
 The political elite is often used as a synonym for a country's rulers, however, it is subjective in its nature. In this paper, we take the political elite to consist of following individuals: First, all lower house members, that is to say, representatives elected directly by the enfranchised population. Compared to the restrictions on eligiblity for the upper house, there were almost no restrictions on being a member of the lower house: one had to be male, and be 30 years or older, which was decreased to 25 years or older following the introduction of male suffrage in 1917. The exclusion of female candidates was subsequently ended in 1918. \autocite{van2018tussen} 
@@ -74,7 +83,7 @@ Fourth, the definition of political elite includes provincial-level executives. 
 
 \section{Data}
 \subsection{Memories van Successie}
-We gather hand-collected probate inventories, \textit{Memories van Successie} from provincial archives all over the Netherlands. Probate inventories were administered by the Dutch tax administration for the purpose of levying inheritance taxes (from 1877 onwards). \autocite{bos1989memories} As a rule, the probate inventories had to be filed with the tax administration at the place of death. As a result, the \textit{Memories van Successie} are publicly available in the country's provincial archives. We use the known place of death of all [NUMBER] politicians to locate the archival source and retrieve the probate inventory. Oftentimes, however, the probate inventory is filed not in the municipality of decease, but at a location with which a politician had a particular bond during their lifetime. Therefore, we employed the strategy of looking for a particular probate inventory in two places: the actual place of death, which is objective, and the place of bonding, which is more subjective and open to judgement. Using either one of the aforementioned strategies allowed me to find 751 politicians' probate inventories. 
+We gather hand-collected probate inventories, \textit{Memories van Successie} from provincial archives all over the Netherlands. Probate inventories were administered by the Dutch tax administration for the purpose of levying inheritance taxes (from 1877 onwards). \autocite{bos1989memories} As a rule, the probate inventories had to be filed with the tax administration at the place of death. As a result, the \textit{Memories van Successie} are publicly available in the country's provincial archives. We use the known place of death of all active politicians between 1871-1922 to locate the archival source and retrieve the probate inventory. Oftentimes, however, the probate inventory is filed not in the municipality of decease, but at a location with which a politician had a particular bond during their lifetime. Therefore, we employed the strategy of looking for a particular probate inventory in two places: the actual place of death, which is objective, and the place of bonding, which is more subjective and open to judgement. Using either one of the aforementioned strategies allowed me to find 751 politicians' probate inventories. 
 
 These probate inventories contain some metadata (including the place of death and time of death, with the help of which the inventories were found), and then (usually) contain a complete list of an individuals assets and liabilities. Two special cases deserve attention: first, some politicians died with 0 or negative net wealth. In a subset of these cases, this is written using words, and an exhaustive list of all assets and liabilities is missing. In other cases, however, the list is there, and net wealth is present as usual. Second, some politicians are claimants to inheritances that are yet to be divided among heirs. In this case, oftentimes all assets yet to be divided are listed, as are all (eventual) liabilities. After a calculation of the net value of the inheritance, the corresponding share of the inheritance accruing to the subject of the probate inventory is added. In some cases, however, the value of the assets and liabilities is directly discounted to the share accruing to the subject of the probate inventory. Finally, sometimes, a claim to an inheritance is sometimes listed describing no underlying assets and merely the value of the claim. Since there were no explicit accounting guidelines, this is often left to the discretion of the tax agent assembling the probate inventory. This is important because it leads to consequences when classifying assets. 
 
@@ -85,55 +94,123 @@ Taxation of the probate inventories took place in various ways, depending on ass
 Access to the probate inventories is limited due to two reasons. First, practically, only probate inventories up until 1927 are publicly available in the archives. Second, Dutch privacy law stipulates a 75-year period before any government-administered documents about individuals can be made public, which would render all inventories from 1945 onward on available. We obtained limited accessibility from the Dutch tax agency to secure as many probate inventories as possible, especially those pertaining to Lower and Upper House members in the period around World War I, when most far-reaching reforms were implemented. Because access was only limited (in terms of time), the share of found inventories is slightly lower than in other periods. In addition, these archives aren't yet as well-organized as the available archives, making it more difficult to find any probate inventory. 
 
 \subsection{Biographical Data}
-Second, We obtain data regarding politicians' careers and social origin from the \href{www.pdc.nl}{\textit{Politiek Documentatie Centrum}}, a private think-tank focused on Dutch national politics. This dataset contains information about all ministers, lower house, upper house members, and the main provincial executives, the \textit{Commissarissen}. We append this dataset by including a hand-collected dataset about provincial assistant-executives, \textit{Gedeputeerden}. These data encompass information about politicians' places of birth and decease, and birth and decease dates, as well as all functions they occupied during their lifetimes (as far as they are known). 
+Second, we obtain data regarding politicians' careers and social origin from the \href{www.pdc.nl}{\textit{Politiek Documentatie Centrum}}, a private think-tank focused on Dutch national politics. This dataset contains information about all ministers, lower house, upper house members, and the main provincial executives, the \textit{Commissarissen}. We append this dataset by including a hand-collected dataset about provincial assistant-executives, \textit{Gedeputeerden}. These data encompass information about politicians' places of birth and decease, and birth and decease dates, as well as all functions they occupied during their lifetimes (as far as they are known). 
 
 These data allow us to determine when politicians were elected and when their mandates ended (either because they chose to pursue another activity, or because they lost an election). These data also include a classification of a politician's ideology: in case of no political party affiliation, this contains a judgement by political historians, but in the majority of cases, this contains the objective political party of which the politician is a member. 
 
 We also use data on politicians from the \textit{Parlement \& Kiezer} series to extract the names of politicians in parliamentary runs. The data provided by the PDC contain information about the starting and ending date of a politician's career, but not directly about to which parliaments they were elected. As a result, uncritical use of the data could lead to politicians being considered as being in a parliament while in fact, they weren't, in the case they weren't continuously members of parliament between their starting and ending date. Hence, we gather all names manually from \textit{Parlement \& Kiezer}, and match them to the names present in the PDC-database, so as to get an exact overview of all MPs in a particular parliament. 
 
-\subsection{Inflation and Wages}
-The appraisal of an individual's assets is denominated in local currency (the Dutch guilder). To ensure intertemporal comparability, that is, comparability between politicians who died at various points in time, we deflate the numbers from the \textit{Memories van Successie} using the data on inflation by Reinhardt \& Rogoff.\footnote{Available \href{https://carmenreinhart.com/2020/02/netherlands/}{here}}
+\subsection{Inflation}
+The appraisal of an individual's assets is denominated in local currency (the Dutch guilder). In the period of investigation, inflation is quite substantial. So as to ensure intertemporal comparability, that is, comparability between politicians who died at various points in time, we deflate the numbers from the \textit{Memories van Successie} using the data on inflation by Reinhardt \& Rogoff.\footnote{Available \href{https://carmenreinhart.com/2020/02/netherlands/}{here}} The remainder of this study reports wealth as the estate value at time of death of a politician, corrected for the inflation (or deflation) that happened from the year of death until 1900. 
 
-To further facilitate the interpretability of the analysis, we convert wealth to subsistence baskets, using data from the official Dutch Statistics by \autocite{deZwart2015} on prices and wages to convert construction worker's wages into subsistence baskets. We make one additional modification to the existing data: the existing data consists of daily subsistence baskets, which we multiply by 365 to retrieve yearly subsistence baskets. In this way, politicians' wealth is represented in terms of a construction worker's yearly wage. In practice, the deflated guilder amount and the measure based on wages give highly similar and highly correlated results. 
+%To further facilitate the interpretability of the analysis, we rerun our entire analysis after converting wealth into a measure that is relative to the estimated wealth distribution at a given point in time, using data from the official Dutch Statistics and probate inventories obtained from De Vicq et al.\autocite{de2020exploring} We make one additional modification to the existing data: the existing data consists of brackets, from which we have to interpolate the mean wealth per bracket. We do this by assuming wealth follows a uniform distribution inside each bracket, so that the mean wealth in a bracket equals the arithmetic mean. Effectively, this procedure assumes that within-bracket wealth is perfectly equally distributed, which is justified if brackets are small. In an additional analysis, we assume that within-bracket wealth follows a Pareto distribution, which is justified if brackets are large.\footnote{More precisely, we interpolate the mean wealth per bracket assuming that inter-bracket wealth follows a Pareto distribution with $\alpha = 2$, in which case the mean equals twice the lower bound of each bracket.} The final results are not sensitive to which interpolation strategy is used. In this way, politicians' wealth can be represented in terms of a quantile of the wealth distribution. 
 
 \section{Wealth and Political Affiliation}
+
+\subsection{How wealthy are politicians?}
 It is often thought that political affiliation and personal wealth of politicians are related. For example, it is frequently thought that individuals from a working class or agricultural background might be more prone to become a socialist, because socialist ideology and politics might represent their interests better than other political parties and ideologies. 
 
 
 \begin{center}
     
-    [grafiek tweede kamer/eerste kamer opgesplits naar affil]
-    
-    [grafiek inter-politician inequality]
-    
-    [grafiek mean/median]
-    
-    [grafiek within pol affiliation deviations]
-    
-   
+    [fig\_wealth\_function boxplot wealth tweede kamer/eerste kamer opgesplits naar affil (figure \ref{fig:wealthfunction})]
+    [table wealth function opgesplits naar affil (table \ref{tab:wealthfunction})]
 \end{center}
-In the aggregate, then, given that the probability of being elected is not related to a politician's wealth, the wealth of the average socialist politician would be lower than that of their non-socialist peers. 
+
+    In figure \ref{fig:wealthfunction}, we investigate the wealth distribution according to political function. In particular, we compare lower house members, upper house members, ministers, and regional executives (\textit{Gedeputeerden} and \textit{Commissarissen}). If we concentrate on the findings in the lower house, we find that socialist politicians are on average poorer than all other politicians, although not substantially. In particular, the range of the wealth distribution at death of socialists is very comparable to the range of the wealth distribution of politicians with other affiliations, meaning the richest (poorest) socialist is about as rich as the richest (poorest) confessional or liberal politician. 
+    
+    If we concentrate on the Upper house, we find that politicians of all affiliations are substantially richer than politicians in the lower house, consistent with electoral restrictions based on wealth, functioning for the largest part of the period under investigation. \autocite{moes1994lijsten} The IQR, however, of socialists seems to be substantially larger, and more skewed towards the lower end, than the IQR of liberals and confessional politicians, implying that the socialist senators were on average about as rich as their non-socialist colleagues, but there are relatively more socialists who are poorer than the median than there are non-socialists. Of course, the reason could be that socialists gained prominence in the upper house after restrictions on wealth were abolished. The dimension of time will be further investigated in the next section. 
+    
+    Next, concerning the ministers, we notice that there have been no socialist ministers, and they were either confessional politicians, or liberals. Although coming largely from elite backgrounds, Ministers are substantially poorer than Upper house members.\autocite{secker1991ministers} The wealth distributions of both liberal and confessional ministers are very similar, with liberals having had a few ministers in their ranks who died relatively poorly (with a wealth of around 3000 deflated guilders), but on average, liberals were slightly richer (the median of the distribution is higher). 
+    
+    Finally, the provincial executives seem to be more like the upper house members than like ministers or lower house members in terms of wealth. On average, they are richer than lower house members, with their average wealth equaling about 160,000 deflated guilders, although there are both very poor and very wealthy outliers. Generally, it is not possible to find out the political affiliation of provincial executives. 
+    
+    
+\subsection{The Richest Politicians}
+    
+    \begin{center}
+    [NOTE DONE YET: grafiek inter-politician inequality per funct and affil]
+    \end{center}
+
+    Next, in figure [YET TO MAKE], we provide a short overview akin to the Forbes 500 of which politicians died with the largest estate value, in other words, which politicians are most likely to have been among the richest politicians from 1871 to 1922. 
+
+\subsection{What do their investment portfolios look like?}
+
+\begin{center}    
+    [grafiek asset composition naar affil en function, table \ref{fig:portcomp1_1}]
+    
+\end{center}
+    
+    Next, we focus on the asset composition of politicians. The asset composition is measured as the value of real estate, shares, bonds, and other (miscellaneous) assets respectively over gross assets. A priori, the most important reason as to why to expect differences in asset composition among politicians in different houses is again the restrictions on upper house membership and the \textit{Hoogst aangeslagenen}. At least until the first income taxation law of 1893, real estate is most heavily taxed, leading to the suspicion that upper house members must have higher real estate shares in their portfolios compared to lower house members. We can immediately see from table \ref{fig:portcomp1_1} that this suspicion is confirmed in the data: politicians from the Upper House, but also candidates to Provincial Estates, had higher real estate shares than lower house members or ministers. Comparing those results with table \ref{fig:portcomp1_2}, we observe that portfolio shares sharply changes for upper house members after 1900: the mean real estate share decreased from 0.44 to 0.22. The real estate share of provincial executives also decrease, albeit by a smaller amount, from 40 percent to 32 percent. The real estate share of lower house members remains the same, at 28\% of gross assets, whereas politicians increase their shareholdings by 10 percentage points on average in comparison to the pre-1900 era. Additionally, politicians prefer to hold about 40\% of their assets in bonds and other safe assets, a number which is consistent across time and across politicians in various functions. 
+    
+    In table \ref{fig:portcomp2}, we decompose the portfolio composition of politicians according to political color. We find that there are differences in average portfolios among politicians of different political ideologies, but not necessarily between houses. Socialists generally have a larger share of their portfolio in real estate, and a smaller share in stocks, whereas liberals hold the most stock, on average. As before, it becomes clear that a large part of politcians prefers to hold bonds and other safe assets, with typically approx. 35\% of their assets invested in bonds. 
 
 \section{Wealth and Various Parliaments}
+
+\subsection{Upper and Lower House}
 Next, we proceed to investigate the average, and median wealth of parliament over time. In accordance with a theoretical and empirical literature on political selection, we might expect 
 
 \begin{center}
-    [Grafiek tweede kamer over time]
-    
-    [grafiek eerste kamer over time]
-    
-    [grafiek ministers over time]
-    
-    [grafiek laagste 10\% hoogste 10\%]
-    
+
+    [grafiek step4compositionlhuh figure \ref{fig:parltime}]
 \end{center}
+
+    In panel A, we observe the political affiliation of the Lower house of Parliament over time. We map a large set of political affiliations to three basic categories: confessional, liberal, and progressives/socialists. Due to the dynamic nature of the data, it is almost never the case that the Lower House of Parliament is filled. At almost any point in time, there are several vacant seats, due to various reasons, for example, members of parliament leaving, or indecisive elections: many elections did not meet the electoral threshold, and the law stipulated that a close election had to be reorganized with only the close candidates contending. Furthermore, members of parliament could be tempted to resign in face of another attractive job offer. Hence, we show the relative shares, which are less sensitive to such oscillations (a politician is usually replace by a politician of the same party), although small shocks over short periods of time are still visible. This figure corroborates well-known parliamentary history: confessional politicians held the a near-majority of seats most of the time, whereas liberals and socialists battled over the remainder. The well-known electoral loss of liberals following universal suffrage in 1918 is also well-documented. \autocite{van2018tussen} 
+    
+    In panel B, we observe the political affiliation of the Upper house of Parliament over time. We employ the same categorisation as in the case of the lower house. First of all, we notice that, while the lower house was dominated by confessional politicians until about 1890, the upper house was populated by a liberal majority. The tide for liberals turn in about 1903, when the majority switched to confessional politicians. Afterwards, the upper house remained majority-confessional, and the liberal share was further subsumed by upcoming socialists and progressive politicians. The demise of the liberals also seems to have happened faster relative to the lower house. 
+    
+\begin{center}    
+    [Grafiek step5fig2wealthperparl: wealth tweede kamer + eerste kamer over time (figure \ref{fig:avgwealthtime}]
+ \end{center}
+ 
+    In panel 2A, we show descriptive statistics of the distribution of wealth of politicians in the lower house over time. First, we observe that there are sharp differences between average and median wealth over time: the distribution of wealth is heavily skewed towards the left, with a few extreme outliers on the right greatly influencing the average, which at times is almost equal or higher than the 75th percentile. Focusing on the average, we observe that it fluctuates widely before roughly 1900. Only afterwards, a clear (and sharp) downward trend can be observed. The median is less sensitive to outliers. In contrast to the average, the median wealth of parliament is steadily declining from about 1888, the time at which the first suffrage extensions were accepted by parliament: the median lower house member of the lower house standing from 1871-1875 dies with an estate value of about 150,000, whereas the estate value of the median lower house member is only about 14,000 guilders in the 1918-1922 parliament.
+    
+    In panel 2B, we show the average and median wealth of the upper house. Both average and median wealth are much higher than in the lower house, consistent with what we noted in the preceding section. Here, in both cases, there seems to be no trend towards less wealthy politicians in the nineteenth century, but in the twentieth century, the senate is being repopulated at a fast rate with poorer politicians. The median upper house member is persistently richer than the median lower house member: in 1870, the median estate value of an upper house member was about 440,000 guilders, whereas the median lower house member had an estate value of 150,000 guilders. In the parliament of 1918-1922, the median lower house member had an estate value of only 14,000 guilders, whereas the median upper house member died with a median net worth of 73,000 guilders. The absolute wealth of both groups of politicians has therefore decreased, whereas the relative estate values has increased. 
+    
+    \begin{center}
+        [grafiek step8figwealthperparlperparty: wealth tweede kamer + eerste kamer over time met partij (figure \ref{fig:avgwealthtimeparty}]
+    \end{center}
+    
+    In figure \ref{fig:avgwealthtimeparty}, we observe the average wealth of lower and upper house members, this time decomposed according to political allegiance. We observe that there is no significant difference in wealth between the two major political factions of the period, liberals and confessional politics. In the upper house, there seems to exist a highly volatile pattern, with sometimes the median confessional politician being more wealthy, and sometimes the median liberal. Socialists, however, seem to poorer: the median socialist is at almost all times poorer than the median liberal and conservatives, at least, in the lower house. The upper house seems to be populated by a more traditional, technocratic type of socialist politician, which is reflected by their wealth. 
+    
+\subsection{Central Government}
+\begin{center}
+    [table wealth ministers (wealth\_kabinet.R) over time (table \ref{tab:avgwealthtimegovt}]
+ \end{center}   
+    We also investigate the wealth of the executive branch of government over time. Similarly to the investigations of upper and lower house, we have data regarding which ministers have served in which governments, so as to get a very nuanced overview of the average wealth of a government over time. The data is fairly complete: for each government, the data coverage is very high (only 1 or 2 ministers are missing), with the exception for the Ruijs van Beerenbrouck government, which has a coverage of 44\%. We observe large variations in average wealth of governments over time: both confessional, coalitional and liberal governments have at times very wealthy executives, and at times quite poor executives. The first government under investigation, the liberal Thorbecke III, has a median wealth of around 100,000 guilders, and subsequent governments appear to be richer on average, culminating in the Kappeyne van de Coppello government, whose median wealth is over 400,000 guilders. The confessional governments by Heemskerk Azn., Mackay, Kuyper are relatively poor, but so are the liberal Pierson and Cort van den Linden governments (their median wealth at death is about 100,000 guilders). The liberal van Tienhoven government stands out by being wealthier than both its predecessors and successors. 
+    
+    In the last column, we also show the wealth of the government's prime minister, in case their \textit{Memories} were found. The poorest prime minister was Theo de Meester, the liberal prime minister  who governed from 1905 to 1908, while simultaneously serving as Minister of Finance. His government did not preside over a majority in parliament, and accomplished relatively little, and resigned over an unapproved military budget. Some of the richest prime ministers were Constantijn Van Lynden van Sandenburg, an orthodox protestant Prime Minister, and Jan Heemskerk Azn., the liberal prime minister, who headed the government twice. 
+    
+\subsection{Provincial Government}
+\begin{center}    
+    [figure from wealth\_dep.R (figure \ref{fig:avgwealthprovexec}]
+ \end{center}   
+    Finally, we also investigate the wealth of provincial executives over time. Since there is in general no available precise information about their period of activity, we must suffice ourselves with analyzing the wealth as a function of time of death, rather than as a function of having served in a particular period. Provincial executives seem to be like upper house members: on average, they are wealthy, their wealth equaling about 170,000 guilders, and there seems to be no tendency of them becoming less wealthy over time. If anything, the shape in graph X seems parabolic: provincial executives seem to die richer over time until around 1900 or 1910, and provincial executives who die afterwards seem to die poorer. However, the regression coefficients for both quadratic and linear specifications are insignificant and close to zero. The lack of a similar trend that we observe in the lower and upper houses, as well as in government, is remarkable. It seems that electoral competition and responsiveness is not yet as developed in the provincial political markets, compared with the national political market. As a result, there is no pressure towards a more meritocratic system, or a more representative supply of politicians. As usual, the variance in wealth is very large: deputies who die around 1910, for example, have estate values ranging from about 22,000 guilders to 4 million guilders. 
+    
+    The figure also features a decomposition of provincial politicians as a function of their remaining political functions: ministers are differentiated from all other politicians by size: larger observations are data from provincial executives who were also Ministers at some point in their career. Similarly, the color separates lower house members from non-lower house members, and the shape of the dot indicates whether a provincial executive was also an upper house members. There is a large heterogeneity of estate value of politicians among one group, with the exception of provincial executives that were also upper house members. These were consistently rich, whereas the lower house members and deputies seem to have no different estate value from non-lower house members. Provincial executives who were Ministers at some point in their career do not seem to have been less wealthy or wealthier than their peers, and for neither of these groups, a trend towards a lower estate value over time can be discovered. Provincial politicians therefore remain very wealthy on average, and do not exhibit the same kinds of trends we have seen before in the lower and upper houses. 
+
+\subsection{The Distribution of Wealth among Politicians over Time}
+
+    Table \ref{tab:ginicoef} gives us a birds-eye view of the wealth distribution among politicians: we show the Gini-coefficient of parliaments, and other measures of spread, over time. The pattern that we observe is remarkable: the estimated Gini-coefficients, closer to one meaning more unequal, show that the lower house is constantly more unequal than the upper house (even though the upper house is, on average, much wealthier). To provide context, we also show the estate value of the poorest member of parliament, the 25th and 75th percentile, and the richest person in parliament. Throughout the nineteenth century, the Gini coefficient in the lower house decreases, implying increased similarity among estate values of politicians, but rises again in the last decade of the nineteenth century and afterwards, implying increased inequality. Levels in the early twentieth century are very high, showing that the lower house had a few politicians who held almost all wealth. The upper house started originally had a moderate degree of inequality (0.45 in the 1871-1874 standing), which remained at the same level until about 1893, when less wealthy contenders managed to join, presumably following a change in the fiscal burden. In the years of democratization, until 1919, inequality among upper house politicians kept almost monotonically increasing, culminating in a very unequal upper house in 1919, after which inequality suddenly dropped to the level of about 1890. 
+    
+    \begin{center}
+        [Here table \ref{tab:ginicoef}]
+    \end{center}
+    
+    We also observe that the lowest estate value is almost always only several hundreds of guilders, and proportionally speaking, practically zero compared to the highest values. It seems that throughout the twenty years from 1870 to roughly 1890, the poorest 25\% of members of lower house seem to get richer, whereas afterwards, their absolute estate value steadily declines, to the point where it is only several thousands of guilders in the last parliament under consideration (1918-1922). The richest politicians are almost always outliers, evidenced by the fact that in both houses, the richest politicians is always more than twice as rich as the 75\% percentile, and in most cases, more than ten times. 
+    
+    The most unequal parliaments were the parliaments from 1900 to 1912, where the larger bulk of the wealth was only held by a few politicians. Comparing this to figure \ref{fig:avgwealthtime}, we see that this happens in spite of both houses generally having less wealthy politicians: even the 90th percentile lower house politician's estate value decreases from around 750,000 guilders around 1895 to 250,000 guilders in 1918, and in the upper house, from about 1 million guilders before 1913, to about 400,000 guilders in the standings of 1916-1917 and later. 
+    
 
 \section{Conclusion}
 
-This study investigated the wealth of the political elite in the Netherlands from 1870 to 1922, and argued that the political elite was extremely wealthy in comparison to the average citizen they represented. The wealth of politicians is analyzed over time, according to political affiliation, and according to specific representative body. We find that the gap between politicians and the population they represent does not appear to decrease over time, even in face of suffrage extensions and other measures promoting better democratic representation. It seems that only in the 1910's elected politicians appear to be significantly poorer than beforehand, but they are still wealthier than the average citizen by a large factor. 
+This study investigated the wealth of the political elite in the Netherlands from 1870 to 1922, and argued that the political elite was extremely wealthy in comparison to the average citizen they represented. The wealth of politicians is analyzed over time, according to political affiliation, and according to specific representative body. We find that socialist politicians are in general poorer than their non-socialist colleagues, and this difference seems persistent. However, the wealth distribution is characterized by large standard deviations, and observed average differences are generally not statistically significant. 
 
-Pol Affil (\& pillarization)
-Representative Body
+We also find that the gap between politicians and the population they represent does not appear to decrease over time throughout the 19th century, even in face of suffrage extensions and other measures promoting better democratic representation. It seems that only in the 1900's elected politicians appear to be getting significantly poorer than beforehand, but they are still wealthier than the average citizen by a large factor. There also seem to exist large differences between various representative bodies: whereas politicians serving in the lower house seem to be the least wealthy, politicians in the upper house seem to be the wealthiest, and although the gap between upper house members and the general population decreases starting from the turn of the century, the relative gap between upper and lower house members seems to increase. 
+
+Additionally, we investigated party and time-related differences in the portfolio composition. Polticians' portfolio seems to have been comparable with any other. Paradoxically, both (generally wealthy) upper house members have large shares of their wealth invested in real estate, and the same appears to be true for (generally less wealthy) socialists. One possible explanation for this fact is that the \textit{Lijst van hoogst aangeslagenen} biased the eligible candidates for upper house membership towards those wealthy persons with significant real estate shares, because taxes were levied principally on real estate. As the fiscal burden started to shift towards other assets, the average real estate share of upper house politicians started to fell, as evidenced by the comparisons over time. As for socialist politicians, this reflects a well-known empirical fact in contemporary portfolio theory, namely that 
+
+Finally, we also made an attempt of finding the wealth of the most powerful politicians: the government. We find that, although there are large differences between governments in terms of average and median wealth, there appears to be no strong correlation between the private estate value of the executives and their political color, or law-making profile, although governments responsible for the most significant increases in taxation (by means of the \textit{Inkomenstenbelasting} in 1893 and 1914, were among the poorest on average.
 
 This work contributes firstly to research in the 20th century focusing on the social origin of politicians by asking how rich political elites are, and to which extent the wealth of the political elite is concentrated. \autocite{van1983toegang, secker1989social, secker1991ministers, van1999eerste, moes2012onder} Secondly, this work brings insight in the mechanisms at play of political selection, the correlation of wealth with political party, and the possible mechanisms leading from suffrage and electoral competition to changing political representation.  \autocite{besley2005political, dal2018progress}
 
@@ -149,4 +226,72 @@ Coming back to the subject of wealth, it seems that it is possible to retrieve p
 %\bibliography{references}
 \clearpage
 \printbibliography
+
+\clearpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.80]{figures/fig_wealth_function.png}
+    \caption{Wealth Distribution According to Function and Party}
+    \label{fig:wealthfunction}
+\end{figure}
+
+\end{landscape}
+\clearpage
+
+% Make table of fig_wealth_function
+
+\input{tables/step7_table_wealth}
+\clearpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.80]{figures/step4comp.png}
+    \caption{Political Color of Parliament over Time}
+    \label{fig:parltime}
+\end{figure}
+
+\end{landscape}
+\clearpage
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{figures/step5fig2wealthperparl.png}
+    \caption{Wealth Distribution in Upper and Lower House over Time}
+    \label{fig:avgwealthtime}
+\end{figure}
+\clearpage
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.60]{figures/step8fig2wealthperparlperparty.png}
+    \caption{Average Wealth per Parliament per Party}
+    \label{fig:avgwealthtimeparty}
+\end{figure}
+\clearpage
+
+
+\input{tables/portfolio}
+\clearpage
+
+\begin{landscape}
+\input{tables/table_wealth_kabinet}
+\clearpage
+
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.80]{figures/wealth_dep.png}
+    \caption{Wealth of Provincial Executives over Time}
+    \label{fig:avgwealthprovexec}
+\end{figure}
+\clearpage
+\end{landscape}
+
+\input{tables/ginicoef}
+
 \end{document}

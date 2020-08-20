@@ -1,27 +1,38 @@
 #Wealth_dep
 library(cowplot)
+library(readxl)
 
 wealth <- read_xlsx("./Data/AnalysisFile.xlsx", sheet = "Analysis") %>%
-    janitor::clean_names() %>%
-    filter(grepl("G|C", indexnummer))
+    janitor::clean_names()
 
 demog <- read_xlsx("./Data/AnalysisFile.xlsx", sheet = "RegistrationFile") %>%
     janitor::clean_names() %>%
-    filter(grepl("G|C", index_nummer))
+    filter(grepl("G|C", index_nummer) | grepl("gedeputeerde|commissaris", functie))
+
+demog <- demog %>%
+    mutate(tweedekamer = ifelse(grepl("2e kamerlid", functie), "yes", "no"),
+           eerstekamer = ifelse(grepl("1e kamerlid", functie), "yes", "no"),
+           minister = ifelse(grepl("minister", functie), "yes", "no"))
 
 data <- left_join(demog, wealth, by = c("index_nummer" = "indexnummer")) %>%
     filter(!is.na(w_deflated))
 
 p2 <- data %>%
     ggplot(aes(x = as.numeric(jaar_van_overlijden), 
-               y = log(w_deflated))) + 
+               y = log(w_deflated),
+               color = tweedekamer,
+               shape = eerstekamer,
+               size = minister)) +
     geom_point() +
     theme_classic() + 
+    scale_shape_manual(values = c(16,18))+
+    scale_size_manual(values = c(3,7))+
+    scale_color_manual(values = c("black", "grey")) +
     ylab("Log(Wealth)")+
     xlab("Year of Death") + 
     ggtitle("Provincial Executives", "Wealth over time")
 
-p2
+p2 <- p2 + guides(shape = guide_legend(override.aes = list(size = 3)))
 
-ggsave("./Figures/wealth_dep.png", p2)
+ggsave("./Figures/wealth_dep.png", p2, height = 5, width = 10)
 

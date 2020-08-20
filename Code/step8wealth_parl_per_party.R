@@ -23,6 +23,7 @@ meanmedw_lh <- lh_parliaments %>%
   summarize(median = median(w_deflated, na.rm = T))
 
 p1 <- meanmedw_lh %>%
+  filter(class != "neutral") %>%
   pivot_longer(median,
                names_to = "Statistic", 
                values_to = "Wealth") %>%
@@ -37,7 +38,8 @@ p1 <- meanmedw_lh %>%
   theme(axis.text.x = element_text(angle = 45)) +
   ggtitle("Lower House", "Median Wealth per Standing") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
-                     limits=c(0,3e5))
+                     limits=c(0,8e5)) +
+  scale_color_manual(values = c("blue", "orange", "red"))
 
 p1 <- p1 + theme(legend.position = c(0.9, 0.9))
 
@@ -73,10 +75,11 @@ p2 <- meanmedw_uh %>%
   ggtitle("Upper House", "Median Wealth per Standing") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
                      limits = c(0, 8e5)) +
-  theme(legend.position = c(0.9, 0.9))
+  theme(legend.position = c(0.9, 0.9)) + 
+  scale_color_manual(values = c("blue", "orange", "red"))
 
 
 fig <- cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(45,55))
 
-ggsave("./Figures/step8fig2wealthperparlperparty.png", fig)
+ggsave("./Figures/step8fig2wealthperparlperparty.png", fig, width = 7.41, height = 13)
 

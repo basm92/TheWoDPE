@@ -47,6 +47,7 @@ parlovtime %>%
 
 #relative
 p1 <- parlovtime %>%
+  filter(class != "neutral") %>%
   group_by(date) %>%
   mutate(total = sum(count), count = count/total) %>%
   select(-total) %>%
@@ -58,7 +59,8 @@ p1 <- parlovtime %>%
   theme_minimal() +
   ggtitle("Political Color of the Lower House") +
   ylab("Proportion") +xlab("Date") + theme_minimal() + 
-  ylim(0, 0.8)
+  ylim(0, 0.8) +
+  scale_color_manual(values = c("blue", "orange", "red"))
 
 # create same for upper house
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -88,7 +90,8 @@ p2 <- parlovtime_uh %>%
   geom_line() +
   theme_minimal() +
   ggtitle("Political Color of the Upper House") +
-  ylab("Proportion") +xlab("Date") + theme_minimal()
+  ylab("Proportion") +xlab("Date") + theme_minimal() +
+  scale_color_manual(values = c("blue", "orange", "red"))
 
 fig <- cowplot::plot_grid(p1, p2, nrow = 2, align = "v")
 
