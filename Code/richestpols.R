@@ -69,7 +69,7 @@ kinds <- list(richest_lh, richest_uh, richest_min, richest_dep) %>%
 
 attr(kinds, "subheadings") <- paste0("Panel ", 
                                      c("A", "B", "C", "D"), 
-                                     ":", 
+                                     ": ", 
                                      c("Lower House", "Upper House", "Ministers", "Provincial Executives"))
 
 kinds <- xtableList(kinds, 
