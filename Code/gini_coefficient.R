@@ -24,7 +24,7 @@ gini_lh <- lh_parliaments %>%
             p25 = quantile(w_deflated, 0.25, na.rm = TRUE),
             p75 = quantile(w_deflated, 0.75, na.rm = TRUE),
             max = max(w_deflated, na.rm = TRUE),
-            gini = Gini(w_deflated, na.rm = TRUE))
+            gini = DescTools::Gini(w_deflated, na.rm = TRUE))
 
 #now, read uh
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -42,16 +42,19 @@ gini_uh <- uh_parliaments %>%
             p25 = quantile(w_deflated, 0.25, na.rm = TRUE),
             p75 = quantile(w_deflated, 0.75, na.rm = TRUE),
             max = max(w_deflated, na.rm = TRUE),
-            gini = Gini(w_deflated, na.rm = TRUE))
+            gini = DescTools::Gini(w_deflated, na.rm = TRUE))
 
 
 #Make the tables
-kinds <- list(gini_lh, gini_uh)
+kinds <- list(gini_lh, gini_uh) %>%
+  lapply(mutate, across(min:max, ~ .x / 1000))
+
 attr(kinds, "subheadings") <- paste0("Panel ", c("A", "B"), ":", c("Lower House", "Upper House"))
 
 kinds <- xtableList(kinds, 
-                    caption = "Wealth Distribution over time",
-                    label = "tab:ginicoef")
+                    caption = "Wealth Distribution over Time (1000 Guilders)",
+                    label = "tab:ginicoef",
+                    digits = c(0,0,2,1,1,1,3))
 
 print.xtableList(kinds, 
                  file = "./Tables/ginicoef.tex",

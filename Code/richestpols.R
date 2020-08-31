@@ -95,13 +95,14 @@ kinds[1:3] <- kinds[-4] %>%
 kinds[4] <- kinds[4] %>%
   lapply(rename, Begin = beginyr, End = endyr, Death = yearofdeath)
 
+kinds <- kinds %>%
+  lapply(mutate, Wealth = Wealth / 1000)
+
 attr(kinds, "subheadings") <- paste0("Panel ", 
                                      c("A", "B", "C", "D"), 
                                      ": ", 
                                      c("Lower House", "Upper House", "Ministers", "Provincial Executives"))
 
-kinds <- kinds %>%
-  lapply(mutate, Wealth = Wealth / 1000)
 
 kinds <- xtableList(kinds, 
                     caption = "5 Richest Politicians in each Function (1000 guilders)",

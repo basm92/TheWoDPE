@@ -71,10 +71,16 @@ table <- wealthreg %>%
             SD = sd(w_deflated, na.rm = T),
             N = sum(!is.na(w_deflated))) %>%
   left_join(wealthpm, by.x = govt, by.y = govt) %>%
-  rename(Government = govt, WealthPM = w_deflated)
+  rename(Government = govt, WealthPM = w_deflated) %>%
+  select(-SD) %>%
+  mutate(WealthPM = round(WealthPM/1000, 1),
+         Mean = round(Mean/1000,1),
+         Median = round(Median/1000,1)) %>%
+  rowwise() %>%
+  mutate(WealthPM = ifelse(is.na(WealthPM), "NA", as.character(WealthPM)))
 
 test <- xtable(table, 
-               caption = "Average Wealth of Governments",
-               digits = 0)
+               caption = "Average Wealth of Governments (1000 guilders)",
+               digits = c(0,0,1,1,1,1))
 
-print(test, include.rownames = FALSE, file = "./Tables/table_wealth_kabinet.tex")
+print.xtable(test, include.rownames = FALSE, file = "./Tables/table_wealth_kabinet.tex")

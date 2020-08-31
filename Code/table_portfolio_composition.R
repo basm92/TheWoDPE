@@ -195,28 +195,62 @@ min <- min %>%
 
 
 #Now make the tables
+#make a function to rewrite a variable
+convert_pct <- function(vector){
+  scales::label_percent(accuracy = 0.1)(vector)
+}
+
 table1_1 <- table %>%
   select(-class) %>%
   filter(before_after == "Before 1900") %>%
   select(-before_after) %>%
-  xtable(caption = "Before 1900", label = "fig:portcomp1_1")
+  mutate(across(mean_re:mean_misc, ~ convert_pct(.x)))
 
 table1_2 <- table %>%
   select(-class) %>%
   filter(before_after == "After 1900") %>%
   select(-before_after) %>%
-  xtable(caption = "After 1900", label = "fig:portcomp1_2")
+  mutate(across(mean_re:mean_misc, ~ convert_pct(.x)))
+  
+kinds <- list(table1_1, table1_2) %>%
+  lapply(rename, 
+         RealEstate = mean_re, 
+         Stocks = mean_shares,
+         Bonds = mean_bonds,
+         Misc = mean_misc,
+         N = n)
+
+attr(kinds, "subheadings") <- paste0("Panel ", 
+                                     c("A","B"),
+                                     ": ",
+                                     c("Before 1900", "After 1900")
+                                     )
+
+kinds <- xtable::xtableList(kinds, 
+                   caption = "Mean Portfolio Shares Before and After 1900",
+                   label = "fig:portcomp1")
+
+print.xtableList(kinds,
+                 colnames.format = "multiple", 
+                 include.rownames = F)
+
 
 table2 <- bind_rows(lh, uh, min)
 
+table2 <- table2 %>%
+  rename(Party = class,
+    RealEstate = mean_re, 
+         Stocks = mean_shares,
+         Bonds = mean_bonds,
+         Misc = mean_misc,
+         N = n) %>%
+  mutate(across(RealEstate:Misc, ~ convert_pct(.x)))
+
 table2 <- xtable(table2, 
-                 caption = "Portfolio Composition according to Political Color",
+                 caption = "Portfolio Share according to Political Color and Organ",
                  label = "fig:portcomp2") 
 
-print.xtable(table1_1, file = "./Tables/portcomp1_1.tex", 
-             include.rownames = FALSE)
-print.xtable(table1_2, file = "./Tables/portcomp1_2.tex", 
-             include.rownames = FALSE)
+
 print.xtable(table2, file = "./Tables/portcomp_2.tex", 
              size = "small",
              include.rownames = FALSE)

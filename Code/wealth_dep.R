@@ -17,6 +17,9 @@ demog <- demog %>%
 data <- left_join(demog, wealth, by = c("index_nummer" = "indexnummer")) %>%
     filter(!is.na(w_deflated))
 
+#change the options
+options(scipen = 1e8)
+
 p2 <- data %>%
     ggplot(aes(x = as.numeric(jaar_van_overlijden), 
                y = log(w_deflated),
@@ -25,14 +28,18 @@ p2 <- data %>%
                size = minister)) +
     geom_point() +
     theme_classic() + 
+    scale_y_continuous(labels = exp,
+        breaks = c(log(1000), log(10000), log(50000), log(100000), log(1000000)),
+        sec.axis = sec_axis( ~.*1, 
+                             name = "Log (Wealth)")) +
     scale_shape_manual(values = c(16,18))+
     scale_size_manual(values = c(3,7))+
     scale_color_manual(values = c("black", "grey")) +
-    ylab("Log(Wealth)")+
+    ylab("Wealth (guilders)")+
     xlab("Year of Death") + 
     ggtitle("Provincial Executives", "Wealth over time")
 
 p2 <- p2 + guides(shape = guide_legend(override.aes = list(size = 3)))
 
-ggsave("./Figures/wealth_dep.png", p2, height = 5, width = 10)
+ggsave("./Figures/wealth_dep.png", p2, height = 5, width = 12)
 
