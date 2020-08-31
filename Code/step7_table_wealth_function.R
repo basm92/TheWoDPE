@@ -2,6 +2,7 @@
 #welath naar affil: eerste en tweede kamer
 library(readxl)
 library(tidyverse)
+library(xtable)
 library(gridExtra)
 library(cowplot)   
 library(janitor)
@@ -88,10 +89,17 @@ make_sum <- function(df, variable) {
 
 kinds <- list(lh_parliaments, uh_parliaments, ministers, gedeputeerden)
 kinds <- lapply(kinds, make_sum, w_deflated)
+
+#Try to make it in thousand guilders
+kinds <- lapply(kinds, mutate, across(Mean:p75, ~ .x / 1000))
+
+
 names(kinds) <- c("Lower House", "Upper House", "Ministers", "Regional Executives")
-attr(kinds, "subheadings") <- paste0("Panel ", c("1","2","3","4"),": ", names(kinds))
+attr(kinds, "subheadings") <- paste0("Panel ", c("A","B","C","D"),": ", names(kinds))
 kinds <- xtableList(kinds, 
-                    caption = "Wealth according to political affiliation")
+                    caption = "Wealth according to political affiliation ($\cdot 10^{3}$ guilders)",
+                    digits = c(0,0,1,1,1,1,1,0),
+                    label = "tab:wealthfunction")
 print.xtableList(kinds, 
                  colnames.format = "multiple", 
                  include.rownames = F)
