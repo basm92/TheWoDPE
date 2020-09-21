@@ -79,8 +79,16 @@ table <- wealthreg %>%
   rowwise() %>%
   mutate(WealthPM = ifelse(is.na(WealthPM), "NA", as.character(WealthPM)))
 
+table <- left_join(table, 
+          read.csv("./Data/kabinetten.csv"),
+          by = c("Government" = "namegovt")) %>%
+  mutate(arrival = str_extract(arrival, "\\d{4}$"),
+         resign = str_extract(resign, "\\d{4}$")) %>%
+  relocate(Government, arrival, resign) %>%
+  unite("period", c(arrival, resign), sep = "-")
+
 test <- xtable(table, 
                caption = "Average Wealth of Governments (1000 guilders)",
-               digits = c(0,0,1,1,1,1))
+               digits = c(0,0,0,1,1,1,1))
 
 print.xtable(test, include.rownames = FALSE, file = "./Tables/table_wealth_kabinet.tex")
