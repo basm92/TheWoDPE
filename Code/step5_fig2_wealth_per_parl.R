@@ -79,3 +79,12 @@ fig <- cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(45,55))
 
 ggsave("./Figures/step5fig2wealthperparl.png", fig, width = 7.41, height = 10)
 
+
+## Histogram of both (before 1900, after 1900)
+
+test <- lh_parliaments %>%
+  mutate(period = as.numeric(str_extract(parliament, "\\d{4}$")) > 1901)
+  
+
+
+

@@ -17,7 +17,7 @@ where_am_i_in_dist <- function(wealthnumber, arg_year){
     
     if(wealthnumber[i] < 13000){
       
-      distr[i] <- "-"
+      distr[i] <- 0
       
     } else{
       
@@ -70,8 +70,62 @@ where_am_i_in_dist <- function(wealthnumber, arg_year){
   
 }
 
-test <- c(12100, 13010, 17010, 800001)
+# It works
+test <- c(47640, 13010, 17010, 800001)
 
 where_am_i_in_dist(test, 1900)
 
+# Now, get the data from step7_table_wealth_function.R 
+# And 'convert' the numbers to a wealth distribution
+lh <- read_csv("./Data/comp_with_pop_1.csv") %>%
+  group_by(`Political Affiliation`) %>%
+  summarize(
+    across(
+      c(Mean, Median, p25, p75), 
+      ~ where_am_i_in_dist(.x, 1900), 
+      .names = "{.col}"),
+    n = mean(n))
+
+uh <- read_csv("./Data/comp_with_pop_2.csv") %>%
+  group_by(`Political Affiliation`) %>%
+  summarize(
+    across(
+      c(Mean, Median, p25, p75), 
+      ~ where_am_i_in_dist(.x, 1900), 
+      .names = "{.col}"),
+    n = mean(n))
+
+min <- read_csv("./Data/comp_with_pop_3.csv") %>%
+  group_by(`Political Affiliation`) %>%
+  summarize(
+    across(
+      c(Mean, Median, p25, p75), 
+      ~ where_am_i_in_dist(.x, 1900), 
+      .names = "{.col}"),
+    n = mean(n))
+
+dep <- read_csv("./Data/comp_with_pop_4.csv") %>%
+  group_by(`Political Affiliation`) %>%
+  summarize(
+    across(
+      c(Mean, Median, p25, p75), 
+      ~ where_am_i_in_dist(.x, 1900), 
+      .names = "{.col}"),
+    n = mean(n))
+
+kinds <- list(lh, uh, min, dep)
+
+names(kinds) <- c("Lower House", "Upper House", "Ministers", "Regional Executives")
+
+attr(kinds, "subheadings") <- paste0("Panel ", c("A","B","C","D"),": ", names(kinds))
+
+kinds <- xtableList(kinds, 
+                    caption = "Estimates of the Place of Politicians in the Population Wealth Distribution",
+                    digits = c(0,0,3,3,3,3,0),
+                    label = "tab:comp_population")
+
+print.xtableList(kinds, 
+                 colnames.format = "multiple", 
+                 include.rownames = F,
+                 file = "/Tables/comparison_with_pop.tex")
 

@@ -54,7 +54,7 @@ make_sum <- function(df, variable) {
   
   
   temp <- df %>%
-    dplyr::distinct() 
+    dplyr::distinct(.[1], .keep_all = TRUE) 
   
   if("class" %in% colnames(df)){
     out <- temp %>%
@@ -88,7 +88,12 @@ make_sum <- function(df, variable) {
 
 
 kinds <- list(lh_parliaments, uh_parliaments, ministers, gedeputeerden)
+
 kinds <- lapply(kinds, make_sum, w_deflated)
+
+for(i in 1:length(kinds)){          
+  write_csv(kinds[[i]], path = paste("./Data/comp_with_pop_",i,".csv", sep = ""))
+}
 
 #Try to make it in thousand guilders
 kinds <- lapply(kinds, mutate, across(Mean:p75, ~ .x / 1000))
@@ -97,7 +102,7 @@ kinds <- lapply(kinds, mutate, across(Mean:p75, ~ .x / 1000))
 names(kinds) <- c("Lower House", "Upper House", "Ministers", "Regional Executives")
 attr(kinds, "subheadings") <- paste0("Panel ", c("A","B","C","D"),": ", names(kinds))
 kinds <- xtableList(kinds, 
-                    caption = "Wealth according to political affiliation ($\cdot 10^{3}$ guilders)",
+                    caption = "Wealth according to political affiliation ($\\cdot 10^{3}$ guilders)",
                     digits = c(0,0,1,1,1,1,1,0),
                     label = "tab:wealthfunction")
 print.xtableList(kinds, 
