@@ -81,10 +81,38 @@ ggsave("./Figures/step5fig2wealthperparl.png", fig, width = 7.41, height = 10)
 
 
 ## Histogram of both (before 1900, after 1900)
+hist_lh <- lh_parliaments %>%
+  mutate(period = as.numeric(str_extract(parliament, "\\d{4}$")) > 1901) %>%
+  mutate(period = ifelse(period == TRUE, "After 1900", "Before 1900")) %>%
+  mutate(period = factor(period, levels = c("Before 1900", "After 1900"))) %>%
+  group_by(period) %>%
+  distinct(b1_nummer, .keep_all = TRUE) %>%
+  ggplot(aes(x = log(w_deflated))) + 
+  geom_histogram() + 
+  facet_grid(. ~ period) +
+  xlab("Log(Wealth)") +
+  ylab("Frequency") +
+  xlim(5,16)+
+  ggtitle("Distribution of Wealth at Death", subtitle = "Lower House") +
+  theme_light()
 
-test <- lh_parliaments %>%
-  mutate(period = as.numeric(str_extract(parliament, "\\d{4}$")) > 1901)
-  
+hist_uh <- uh_parliaments %>%
+  mutate(period = as.numeric(str_extract(parliament, "\\d{4}$")) > 1901) %>%
+  mutate(period = ifelse(period == TRUE, "After 1900", "Before 1900")) %>%
+  mutate(period = factor(period, levels = c("Before 1900", "After 1900"))) %>%
+  group_by(period) %>%
+  distinct(b1_nummer, .keep_all = TRUE) %>%
+  ggplot(aes(x = log(w_deflated))) + 
+  geom_histogram() + 
+  facet_grid(. ~ period) +
+  xlab("Log(Wealth)") +
+  ylab("Frequency") +
+  ylim(0,25)+
+  xlim(5, 16)+
+  ggtitle("Distribution of Wealth at Death", subtitle = "Upper House") +
+  theme_light()
 
+p3 <- cowplot::plot_grid(hist_lh, hist_uh, nrow = 2)
 
+ggsave(p3, filename = "Figures/Histogram_wealth_per_parl.png")
 

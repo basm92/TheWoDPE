@@ -66,16 +66,16 @@ wealthpm <- wealthreg %>%
 table <- wealthreg %>%
   group_by(govt) %>%
   distinct(b1_nummer, .keep_all = T) %>%
-  summarize(Mean = mean(w_deflated, na.rm = T), 
+  summarize(#Mean = mean(w_deflated, na.rm = T), 
             Median = median(w_deflated, na.rm = T),
             SD = sd(w_deflated, na.rm = T),
             N = sum(!is.na(w_deflated))) %>%
   left_join(wealthpm, by.x = govt, by.y = govt) %>%
   rename(Government = govt, WealthPM = w_deflated) %>%
   select(-SD) %>%
-  mutate(WealthPM = round(WealthPM/1000, 1),
-         Mean = round(Mean/1000,1),
-         Median = round(Median/1000,1)) %>%
+  mutate(WealthPM = round(WealthPM, 0)) %>%
+    #     Mean = round(Mean/1000,1),
+   #      Median = round(Median/1000,1)) %>%
   rowwise() %>%
   mutate(WealthPM = ifelse(is.na(WealthPM), "NA", as.character(WealthPM)))
 
@@ -87,8 +87,14 @@ table <- left_join(table,
   relocate(Government, arrival, resign) %>%
   unite("period", c(arrival, resign), sep = "-")
 
+gov_orientation <- read_csv("./Data/gov_orientation.csv")
+
+table <- left_join(table, gov_orientation, by = c("Government" = "government")) %>%
+  relocate(Government, orientation, period, Median, WealthPM, N) %>%
+  rename("Orientation" = orientation, "Period" = period)
+
 test <- xtable(table, 
                caption = "Average Wealth of Governments (1000 guilders)",
-               digits = c(0,0,0,1,1,1,1))
+               digits = c(0,0,0,0,0,1,1))
 
 print.xtable(test, include.rownames = FALSE, file = "./Tables/table_wealth_kabinet.tex")
