@@ -91,6 +91,10 @@ kinds <- list(lh_parliaments, uh_parliaments, ministers, gedeputeerden)
 
 kinds <- lapply(kinds, make_sum, w_deflated)
 
+kinds <- kinds %>%
+  lapply(relocate, `Political Affiliation`, n, Mean, StdDev, p25, Median, p75) %>%
+  lapply(rename, p50 = Median, N = n)
+
 for(i in 1:length(kinds)){          
   write_csv(kinds[[i]], path = paste("./Data/comp_with_pop_",i,".csv", sep = ""))
 }
@@ -102,11 +106,14 @@ kinds <- lapply(kinds, mutate, across(Mean:p75, ~ .x / 1000))
 names(kinds) <- c("Lower House", "Upper House", "Ministers", "Regional Executives")
 attr(kinds, "subheadings") <- paste0("Panel ", c("A","B","C","D"),": ", names(kinds))
 kinds <- xtableList(kinds, 
-                    caption = "Wealth according to political affiliation ($\\cdot 10^{3}$ guilders)",
+                    caption = "Wealth according to political affiliation (1000 guilders)",
                     digits = c(0,0,1,1,1,1,1,0),
                     label = "tab:wealthfunction")
 print.xtableList(kinds, 
                  colnames.format = "multiple", 
                  include.rownames = F)
 
+
+#footnote
+#\floatfoot{This table shows various statistics (mean, standard deviation, 25th, 50th (median), and 75th quantile) of net wealth at the age of death (1000 of 1900 guilders) for politicians according to representative body, and political affiliation. These numbers give a good idea of how wealthy the bulk of representatives were across the period 1870-1920. Note that the sample sizes does not add up to the unique amount of \textit{Memories van Successie}, since some politicians were members of more than one representative body, and hence, have been taken into account more than once.}
 
