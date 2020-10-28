@@ -130,4 +130,4 @@ print.xtableList(kinds,
                  colnames.format = "multiple", 
                  include.rownames = F)
 
-#\floatfoot{This table shows the average wealth (in 1000 guilders) of politicians conditional on having died two years after leaving office (indicated by \textit{Harnas}), as well as its standard deviation, median, and the average age of death, to compare whether politicians that died recently after leaving office died on average earlier than politicians who died later after leaving office. The age of death of regional executives is not generally known.}
+#\floatfoot{This table shows the average wealth (in 1000 guilders) of politicians conditional on having died two years after leaving office (indicated by \textit{Harnas}), as well as its standard deviation, median, and the average age of death (AoD), to compare whether politicians that died recently after leaving office died on average earlier than politicians who died later after leaving office. The age of death of regional executives is not generally known.}
