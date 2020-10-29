@@ -36,10 +36,13 @@ p2 <- data %>%
     scale_size_manual(values = c(3,7))+
     scale_color_manual(values = c("black", "grey")) +
     ylab("Wealth (guilders)")+
-    xlab("Year of Death") + 
-    ggtitle("Provincial Executives", "Wealth over time")
+    xlab("Year of Death") 
 
-p2 <- p2 + guides(shape = guide_legend(override.aes = list(size = 3)))
+p2 <- p2 + guides(shape = guide_legend(override.aes = list(size = 3))) +
+  theme(text = element_text(size=13)) +
+  guides(color=guide_legend(title="Tweede Kamer?"),
+         shape = guide_legend(title = "Eerste Kamer?"),
+         size = guide_legend(title = "Minister?"))
 
 ggsave("./Figures/wealth_dep.png", p2, height = 5, width = 12)
 
