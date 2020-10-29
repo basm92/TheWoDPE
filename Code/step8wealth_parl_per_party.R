@@ -30,18 +30,22 @@ p1 <- meanmedw_lh %>%
   ggplot(aes(x = parliament, 
              y = Wealth, 
              group = class, 
-             color = class)) + 
+             linetype = class)) + 
   geom_line() + 
   theme_minimal() + 
   xlab("Parliament") +
   ylab("Wealth (guilders)") +
-  theme(axis.text.x = element_text(angle = 45)) +
-  ggtitle("Lower House", "Median Wealth per Standing") + 
+  theme(axis.text.x = element_text(angle = 45),
+        text = element_text(size = 13),
+        legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black")) +
+  ggtitle("Panel A: Lower House") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
                      limits=c(0,8e5)) +
-  scale_color_manual(values = c("blue", "orange", "red"))
+  scale_color_manual(values = c("blue", "orange", "red")) 
 
-p1 <- p1 + theme(legend.position = c(0.9, 0.9))
+p1 <- p1 + theme(legend.position = c(0.9, 0.85)) + 
+  guides(linetype=guide_legend(title="Political Color"))
 
 #now, read uh
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -66,20 +70,24 @@ p2 <- meanmedw_uh %>%
   ggplot(aes(x = parliament, 
              y = Wealth, 
              group = class, 
-             color = class)) + 
+             linetype = class)) + 
   geom_line() + 
   theme_minimal() + 
   xlab("Parliament") +
   ylab("Wealth (guilders)") +
   theme(axis.text.x = element_text(angle = 45)) +
-  ggtitle("Upper House", "Median Wealth per Standing") + 
+  ggtitle("Panel B: Upper House") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
                      limits = c(0, 8e5)) +
-  theme(legend.position = c(0.9, 0.9)) + 
-  scale_color_manual(values = c("blue", "orange", "red"))
+  theme(legend.position = c(0.9, 0.9),
+        text = element_text(size = 13),
+        legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black")) + 
+  scale_color_manual(values = c("blue", "orange", "red")) +
+  guides(linetype=guide_legend(title="Political Color"))
 
 
 fig <- cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(45,55))
 
-ggsave("./Figures/step8fig2wealthperparlperparty.png", fig, width = 7.41, height = 13)
+ggsave("./Figures/step8fig2wealthperparlperparty.png", fig, width = 12, height = 8)
 

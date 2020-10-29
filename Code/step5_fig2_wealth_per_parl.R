@@ -17,28 +17,35 @@ lh_parliaments <- left_join(lh_parliaments, wealth,
 
 meanmedw_lh <- lh_parliaments %>%
   group_by(parliament) %>%
-  summarize(median = median(w_deflated, na.rm = T),
+  summarize(p50 = median(w_deflated, na.rm = T),
             p25 = quantile(w_deflated, 0.25, na.rm = T),
             p75 = quantile(w_deflated, 0.75, na.rm = T),
             p90 = quantile(w_deflated, 0.90, na.rm = T),
             count = sum(!is.na(w_deflated)))
 
 p1 <- meanmedw_lh %>%
- pivot_longer(c(median, p25, p75, p90),
+ pivot_longer(c(p25, p50, p75, p90),
               names_to = "Statistic", 
               values_to = "Wealth") %>%
   ggplot(aes(x = parliament, 
              y = Wealth, 
              group = Statistic, 
-             color = Statistic)) + 
+             linetype = Statistic)) + 
   geom_line() + 
   theme_minimal() + 
   xlab("Parliament") +
   ylab("Wealth (guilders)") +
-  theme(axis.text.x = element_text(angle = 45), legend.position = c(0.9, 0.9)) +
-  ggtitle("Lower House", "Avg. and Median Wealth per Standing") + 
+  theme(axis.text.x = element_text(angle = 45), 
+        text = element_text(size=13),
+        legend.position = c(0.9, 0.8),
+        #panel.border = element_rect(colour = "black", fill=NA),
+        legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black")
+        ) +
+  ggtitle("Panel A: Lower House") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
-                     limits=c(0,12e5))
+                     limits=c(0,12e5)) +
+  guides(linetype=guide_legend(title="Quantile"))
 
 #now, read uh
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -50,34 +57,35 @@ uh_parliaments <- left_join(uh_parliaments, wealth,
 
 meanmedw_uh <- uh_parliaments %>%
   group_by(parliament) %>%
-  summarize(median = median(w_deflated, na.rm = T),     
+  summarize(p50 = median(w_deflated, na.rm = T),     
             p25 = quantile(w_deflated, 0.25, na.rm = T),
             p75 = quantile(w_deflated, 0.75, na.rm = T),
             p90 = quantile(w_deflated, 0.90, na.rm = T),
             count = sum(!is.na(w_deflated)))
 
 p2 <- meanmedw_uh %>%
-  pivot_longer(c(median,p25, p75, p90),
+  pivot_longer(c(p25, p50, p75, p90),
                names_to = "Statistic", 
                values_to = "Wealth") %>%
   ggplot(aes(x = parliament, 
              y = Wealth, 
              group = Statistic, 
-             color = Statistic)) + 
+             linetype = Statistic)) + 
   geom_line() + 
   theme_minimal() + 
   xlab("Parliament") +
   ylab("Wealth (guilders)") +
   theme(axis.text.x = element_text(angle = 45)) +
-  ggtitle("Upper House", "Avg. and Median Wealth per Standing") + 
+  ggtitle("Panel B: Upper House") + 
   scale_y_continuous(labels = scales::number_format(accuracy = 1),
                      limits = c(0, 20e5)) +
-theme(legend.position = "none")
+theme(legend.position = "none", text = element_text(size=13)) +
+  guides(linetype=guide_legend(title="Quantile"))
 
 
-fig <- cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(45,55))
+fig <- cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(55,45))
 
-ggsave("./Figures/step5fig2wealthperparl.png", fig, width = 7.41, height = 10)
+ggsave("./Figures/step5fig2wealthperparl.png", fig, width = 12, height = 8)
 
 
 ## Histogram of both (before 1900, after 1900)

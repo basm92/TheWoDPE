@@ -54,13 +54,15 @@ p1 <- parlovtime %>%
   ggplot(aes(x = date, 
              y = count, 
              group = class, 
-             color = class)) + 
+             linetype = class)) + 
   geom_line() +
   theme_minimal() +
-  ggtitle("Political Color of the Lower House") +
+  ggtitle("Panel A: Lower House") +
   ylab("Proportion") +xlab("Date") + theme_minimal() + 
   ylim(0, 0.8) +
-  scale_color_manual(values = c("blue", "orange", "red"))
+  scale_color_manual(values = c("blue", "orange", "red")) +
+  theme(text = element_text(size=13)) +
+  guides(linetype=guide_legend(title="Political Color"))
 
 # create same for upper house
 uh_parliaments <- read_csv("./Data/uh_parliaments.csv") %>%
@@ -86,13 +88,15 @@ p2 <- parlovtime_uh %>%
   ggplot(aes(x = date, 
              y = count, 
              group = class, 
-             color = class)) + 
+             linetype = class)) + 
   geom_line() +
   theme_minimal() +
-  ggtitle("Political Color of the Upper House") +
+  ggtitle("Panel B: Upper House") +
   ylab("Proportion") +xlab("Date") + theme_minimal() +
-  scale_color_manual(values = c("blue", "orange", "red"))
+  scale_color_manual(values = c("blue", "orange", "red")) +
+  theme(text = element_text(size=13)) +
+  guides(linetype=guide_legend(title="Political Color"))
 
 fig <- cowplot::plot_grid(p1, p2, nrow = 2, align = "v")
 
-ggsave("./Figures/step4comp.png", fig)
+ggsave("./Figures/step4comp.png", fig, height = 8, width = 12)
