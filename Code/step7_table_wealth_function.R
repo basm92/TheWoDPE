@@ -115,5 +115,4 @@ print.xtableList(kinds,
 
 
 #footnote
-#\floatfoot{This table shows various statistics (mean, standard deviation, 25th, 50th (median), and 75th quantile) of net wealth at the age of death (1000 of 1900 guilders) for politicians according to representative body, and political affiliation. These numbers give a good idea of how wealthy the bulk of representatives were across the period 1870-1920. Note that the sample sizes does not add up to the unique amount of \textit{Memories van Successie}, since some politicians were members of more than one representative body, and hence, have been taken into account more than once.}
-
+#\floatfoot{This table shows various statistics (mean, standard deviation, 25th, 50th (median), and 75th quantile) of net wealth at the age of death (in 1000 guilders, in values of 1900) for politicians according to representative body, and political affiliation. These numbers give a good idea of how wealthy the bulk of representatives were across the period 1870-1920. Note that the sample sizes does not add up to the unique amount of \textit{Memories van Successie}, since some politicians were members of more than one representative body, and hence, have been taken into account more than once.}

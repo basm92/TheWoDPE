@@ -73,7 +73,7 @@ table <- wealthreg %>%
   left_join(wealthpm, by.x = govt, by.y = govt) %>%
   rename(Government = govt, WealthPM = w_deflated) %>%
   select(-SD) %>%
-  mutate(WealthPM = round(WealthPM/1000, 3)) %>%
+  mutate(WealthPM = round(WealthPM/1000, 1)) %>%
     #     Mean = round(Mean/1000,1),
    #      Median = round(Median/1000,1)) %>%
   rowwise() %>%
@@ -95,7 +95,7 @@ table <- left_join(table, gov_orientation, by = c("Government" = "government")) 
 
 test <- xtable(table, 
                caption = "Average Wealth of Governments (1000 guilders)",
-               digits = c(0,0,0,0,3,3,1))
+               digits = c(0,0,0,0,1,1,1))
 
 print.xtable(test, include.rownames = FALSE, file = "./Tables/table_wealth_kabinet.tex")
-#\floatfoot{This table shows the median wealth of governments, including, if available, the wealth of the Prime Minister (WealthPM),in 1000 deflated 1900 guilders.}
+#\floatfoot{This table shows the median wealth of governments, including, if available, the wealth of the Prime Minister (WealthPM),in 1000 guilders, in values of 1900.}
