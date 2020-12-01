@@ -81,37 +81,37 @@ lh <- read_csv("./Data/comp_with_pop_1.csv") %>%
   group_by(`Political Affiliation`) %>%
   summarize(
     across(
-      c(Mean, Median, p25, p75), 
+      c(Mean, p50, p25, p75), 
       ~ where_am_i_in_dist(.x, 1900), 
       .names = "{.col}"),
-    n = mean(n))
+    n = N)
 
 uh <- read_csv("./Data/comp_with_pop_2.csv") %>%
   group_by(`Political Affiliation`) %>%
   summarize(
     across(
-      c(Mean, Median, p25, p75), 
+      c(Mean, p50, p25, p75), 
       ~ where_am_i_in_dist(.x, 1900), 
       .names = "{.col}"),
-    n = mean(n))
+    n = N)
 
 min <- read_csv("./Data/comp_with_pop_3.csv") %>%
   group_by(`Political Affiliation`) %>%
   summarize(
     across(
-      c(Mean, Median, p25, p75), 
+      c(Mean, p50, p25, p75), 
       ~ where_am_i_in_dist(.x, 1900), 
       .names = "{.col}"),
-    n = mean(n))
+    n = N)
 
 dep <- read_csv("./Data/comp_with_pop_4.csv") %>%
   group_by(`Political Affiliation`) %>%
   summarize(
     across(
-      c(Mean, Median, p25, p75), 
+      c(Mean, p50, p25, p75), 
       ~ where_am_i_in_dist(.x, 1900), 
       .names = "{.col}"),
-    n = mean(n))
+    n = N)
 
 kinds <- list(lh, uh, min, dep)
 
